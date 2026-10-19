@@ -1,0 +1,210 @@
+<!doctype html><html lang="zh"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="stitchwork-version" content="0.9.0">
+<title>A4 · Stitchwork 工作原理 &middot; Stitchwork 维基</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/demos.css"></head><body data-mod="foundations">
+<header class="topbar">
+  <div class="topbar-inner">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  <a class="brand" href="index.html">Stitchwork <span>维基</span></a>
+  <span class="wiki-ver" title="适用于 Stitchwork 0.9.0">0.9.0</span>
+  <div class="reading" id="reading" aria-hidden="true"><span class="reading-label" id="readingLabel"></span><span class="reading-track"><span class="reading-fill" id="readingFill"><svg class="reading-needle" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c-.667 -.667 3.262 -6.236 11.785 -16.709a3.5 3.5 0 1 1 5.078 4.791c-10.575 8.612 -16.196 12.585 -16.863 11.918"/><path d="M17.5 6.5l-1 1"/><path d="M17 7c-2.333 -2.667 -3.5 -4 -5 -4s-2 1 -2 2c0 4 8.161 8.406 6 11c-1.056 1.268 -3.363 1.285 -5.75 .808"/><path d="M5.739 15.425c-1.393 -.565 -3.739 -1.925 -3.739 -3.425"/><path d="M19.5 9.5l1.5 1.5"/></svg></span></span></div>
+  <div class="topbar-right">
+    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="../en/A4-how-stitchwork-works.html">English</option><option value="" selected>中文 · ~100%</option></select>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"><span class="theme-ico" aria-hidden="true">&#9680;</span></button>
+  </div>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"><input class="search" id="search" type="search" placeholder="筛选页面…" aria-label="筛选页面…"><nav class="nav"><details class="nav-sec cur" data-mod="foundations" open><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12l0 9"/><path d="M12 12l-8 -4.5"/><path d="M16 5.25l-8 4.5"/></svg><span class="sec-name" title="A-基础">A-基础</span><span class="sec-n">7</span></summary><ul><li><a href="A0-about-stitchwork.html"><span class="page-code">A0</span> <span class="page-name">关于绣补</span></a></li><li><a href="A1-getting-started.html"><span class="page-code">A1</span> <span class="page-name">内容介绍</span></a></li><li><a href="A2-installing-packs.html"><span class="page-code">A2</span> <span class="page-name">安装资源包</span></a></li><li><a href="A3-pack-manager.html"><span class="page-code">A3</span> <span class="page-name">资源包管理器</span></a></li><li class="active"><a href="A4-how-stitchwork-works.html"><span class="page-code">A4</span> <span class="page-name">Stitchwork 工作原理</span></a></li><li><a href="A5-when-something-looks-wrong.html"><span class="page-code">A5</span> <span class="page-name">出现异常情况时</span></a></li><li class="extra"><a href="AEx1-conditional-activation.html"><span class="page-code">AEx1</span> <span class="page-name">条件激活<span class="ex-tag">附加</span></span></a></li></ul></details><details class="nav-sec" data-mod="graphics"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h.01"/><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"/><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"/><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"/></svg><span class="sec-name" title="B-图像">B-图像</span><span class="sec-n">11</span></summary><ul><li><a href="B0-choosing-a-workflow.html"><span class="page-code">B0</span> <span class="page-name">选择工作流</span></a></li><li><a href="B1-starting-a-skin-pack.html"><span class="page-code">B1</span> <span class="page-name">开始制作资源包</span></a></li><li><a href="B2-finding-any-sprite.html"><span class="page-code">B2</span> <span class="page-name">查找任意精灵图</span></a></li><li><a href="B3-spritesheets.html"><span class="page-code">B3</span> <span class="page-name">移植既有作品：整表与 CKC</span></a></li><li><a href="B4-t2d-sprites.html"><span class="page-code">B4</span> <span class="page-name">T2D 精灵图</span></a></li><li><a href="B5-anchors.html"><span class="page-code">B5</span> <span class="page-name">更大的画幅：锚点</span></a></li><li><a href="B6-animation-canvas.html"><span class="page-code">B6</span> <span class="page-name">动画画布工作流</span></a></li><li><a href="B7-sprite-paths.html"><span class="page-code">B7</span> <span class="page-name">精灵图路径速查</span></a></li><li><a href="B8-animation-controller.html"><span class="page-code">B8</span> <span class="page-name">动画控制台</span></a></li><li><a href="B9-colors.html"><span class="page-code">B9</span> <span class="page-name">色彩</span></a></li><li class="extra"><a href="BEx1-reused-frames.html"><span class="page-code">BEx1</span> <span class="page-name">帧复用：一图多动画<span class="ex-tag">附加</span></span></a></li></ul></details><details class="nav-sec" data-mod="text"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9h8"/><path d="M8 13h6"/><path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3z"/></svg><span class="sec-name" title="C-文本">C-文本</span><span class="sec-n">2</span></summary><ul><li><a href="C1-text.html"><span class="page-code">C1</span> <span class="page-name">文本与对话</span></a></li><li><a href="C2-fonts.html"><span class="page-code">C2</span> <span class="page-name">字体：修复缺字方框</span></a></li></ul></details><details class="nav-sec" data-mod="audio"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8a5 5 0 0 1 0 8"/><path d="M17.7 5a9 9 0 0 1 0 14"/><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"/></svg><span class="sec-name" title="D-音频">D-音频</span><span class="sec-n">1</span></summary><ul><li><a href="D1-audio.html"><span class="page-code">D1</span> <span class="page-name">音频</span></a></li></ul></details><details class="nav-sec" data-mod="video"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M8 4l0 16"/><path d="M16 4l0 16"/><path d="M4 8l4 0"/><path d="M4 16l4 0"/><path d="M4 12l16 0"/><path d="M16 8l4 0"/><path d="M16 16l4 0"/></svg><span class="sec-name" title="E-视频">E-视频</span><span class="sec-n">1</span></summary><ul><li><a href="E1-video.html"><span class="page-code">E1</span> <span class="page-name">视频</span></a></li></ul></details><details class="nav-sec" data-mod="ship"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21l-8 -4.5v-9l8 -4.5l8 4.5v4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12v9"/><path d="M12 12l-8 -4.5"/><path d="M15 18h7"/><path d="M19 15l3 3l-3 3"/></svg><span class="sec-name" title="F-发布">F-发布</span><span class="sec-n">2</span></summary><ul><li><a href="Ship-priority-and-conflicts.html"><span class="page-name">优先级与冲突</span></a></li><li><a href="distributing-your-pack.html"><span class="page-name">发布你的资源包</span></a></li></ul></details><details class="nav-sec" data-mod="reference"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"/><path d="M19 16h-12a2 2 0 0 0 -2 2"/><path d="M9 8h6"/></svg><span class="sec-name" title="G-参考">G-参考</span><span class="sec-n">8</span></summary><ul><li><a href="dumping.html"><span class="page-name">资源导出与全量导出</span></a></li><li><a href="companion-mods.html"><span class="page-name">配套模组</span></a></li><li><a href="code-mod-api.html"><span class="page-name">面向代码模组的 API</span></a></li><li><a href="testing-with-savestates.html"><span class="page-name">存档状态测试（DebugMod）</span></a></li><li><a href="glossary-zh.html"><span class="page-name">术语表（简体中文）</span></a></li><li><a href="hotkeys.html"><span class="page-name">热键</span></a></li><li><a href="pack-folder-structure.html"><span class="page-name">资源包目录结构</span></a></li><li><a href="troubleshooting.html"><span class="page-name">问题自查</span></a></li></ul></details></nav></aside>
+  <main class="content"><article>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">首页</a> <span>&rsaquo;</span> <a class="crumb-mod" href="index.html#A"><svg class="mi" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12l0 9"/><path d="M12 12l-8 -4.5"/><path d="M16 5.25l-8 4.5"/></svg>A-基础</a> <span>&rsaquo;</span> <span aria-current="page">A4 · Stitchwork 工作原理</span></nav>
+    <header class="page-head"><h1><span class="page-code">A4</span> <span class="page-name">Stitchwork 工作原理</span></h1><div class="page-tags"><span class="tag lvl-intro">入门级</span><span class="tag aud-creator">创作者</span><span class="read-time" title="预计阅读时间"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>阅读约 2 分钟</span></div><div class="page-dates">适用于 Stitchwork 0.9.0 &middot; 更新于: 2026-10-19</div></header>
+    <blockquote class="note"><p><strong>创作者路线 · 从小处着手</strong><br>比起安装资源包，制作资源包需要更多的阅读和测试。<br>先读完这篇简短的入门，再挑一种资源类型完成你的第一次修改。</p></blockquote>
+<h2 id="replacement-happens-at-load-time">替换发生在资源加载时</h2>
+<p>Stitchwork 永远不会修改游戏的资源文件。它会在游戏<strong>请求加载某个资源</strong>时拦截这次请求，并用你的文件反馈给游戏，而不是原版资源。关闭资源包后，游戏就会重新加载原版资源。<strong>拦截请求，替换反馈结果。</strong> 这就是 Stitchwork 最核心的替换资源机制，因此你永远不需要重新打包游戏文件，也不会影响你的存档。</p>
+<details>
+<summary>底层实现方法（可选阅读）</summary>
+<p>Stitchwork 使用 Harmony Hook 拦截游戏的资源访问，例如 Sprite 设置、<wbr><code>Language.Get</code> 文本读取以及音频播放等。当游戏请求一个已被替换的资源时，Hook 会将其替换为你的版本。Stitchwork 永远不会修改游戏的资源文件，所有替换都只在运行时生效。</p>
+</details>
+<h2 id="your-working-files">你的工作文件</h2>
+<p>Stitchwork 把你的工作成果单独存放，而不是放在模组文件夹里。游戏文件夹里的 <code>Stitchwork/</code> 存放你正在修改的工作区文件，<wbr><code>Packs/</code> 存放你安装的资源包。模组管理器更新时，永远不会碰到这两个文件夹。顺着下面这条丝线移动，看看 Stitchwork 的文件夹是怎么一个个出现的；点开其中任意一个，就能看到里面放的是什么。</p>
+<figure class="demo" data-demo="install-explorer"><div class="swx" data-dm-root data-mode="manual">
+<div class="swx-mount"></div>
+<div class="swx-strings" hidden>
+<span data-d="install-explorer:ui.title:t">文件</span>
+<span data-d="install-explorer:ui.mode.manual:t">手动安装</span>
+<span data-d="install-explorer:ui.mode.cogfly:t">Cogfly 管理器档案</span>
+<span data-d="install-explorer:ui.cust:t">Customizer 皮肤</span>
+<span data-d="install-explorer:ui.stage.0:t">刚装好</span>
+<span data-d="install-explorer:ui.stage.0:what"><strong>刚装好：</strong>只有你自己复制进去的文件。顺着这根丝线往后移，看看 Stitchwork 会添加些什么。</span>
+<span data-d="install-explorer:ui.stage.1:t">首次启动</span>
+<span data-d="install-explorer:ui.stage.1:what"><strong>首次启动：</strong>Stitchwork 会建好你的工作区文件夹、Packs 货架和它自己的设置。</span>
+<span data-d="install-explorer:ui.stage.2:t">使用各项功能</span>
+<span data-d="install-explorer:ui.stage.2:what"><strong>使用各项功能：</strong>用到某些工具时，会多出它们需要的文件夹。</span>
+<span data-d="install-explorer:ui.count:t">Stitchwork 已添加 {n} 项</span>
+<span data-d="install-explorer:ui.count0:t">还没有添加任何东西</span>
+<span data-d="install-explorer:ui.hint:t">选一个文件夹或文件，看看它是做什么用的。带补丁花纹的文件夹是 Stitchwork 自己的。</span>
+<span data-d="install-explorer:ui.see:t">参见：</span>
+<span data-d="install-explorer:ui.leg.sw:t">由 Stitchwork 添加</span>
+<span data-d="install-explorer:ui.leg.ships:t">Stitchwork 自带</span>
+<span data-d="install-explorer:ui.leg.other:t">游戏、BepInEx 或你的模组管理器</span>
+<span data-d="install-explorer:ui.leg.cust:t">Customizer</span>
+<span data-d="install-explorer:ui.found:t">已找到</span>
+<span data-d="install-explorer:ui.lost:t">未找到</span>
+<span data-d="install-explorer:chip.sw1:t">首次启动时由 Stitchwork 添加</span>
+<span data-d="install-explorer:chip.sw2:t">用到时由 Stitchwork 添加</span>
+<span data-d="install-explorer:chip.ships:t">Stitchwork 自带</span>
+<span data-d="install-explorer:chip.mgr:t">由你的模组管理器管理</span>
+<span data-d="install-explorer:chip.game:t">属于游戏本体</span>
+<span data-d="install-explorer:chip.loader:t">BepInEx</span>
+<span data-d="install-explorer:chip.user:t">由你自己安装</span>
+<span data-d="install-explorer:chip.cust:t">Customizer · 原地读取，从不改动</span>
+<span data-d="install-explorer:chip.shared:t">所有管理器档案共用</span>
+<span data-d="install-explorer:chip.profile:t">仅限当前管理器档案</span>
+<span data-d="install-explorer:chip.edit:t">Stitchwork 会在里面加一行</span>
+<span data-d="install-explorer:who.game:t">游戏</span>
+<span data-d="install-explorer:who.loader:t">BepInEx</span>
+<span data-d="install-explorer:who.mgr:t">Cogfly</span>
+<span data-d="install-explorer:who.ships:t">自带</span>
+<span data-d="install-explorer:who.sw:t">Stitchwork</span>
+<span data-d="install-explorer:who.user:t">你的</span>
+<span data-d="install-explorer:who.cust:t">Customizer</span>
+<span data-d="install-explorer:who.shared:t">共享</span>
+<span data-d="install-explorer:who.profile:t">当前配置</span>
+<span data-d="install-explorer:who.found:t">已找到</span>
+<span data-d="install-explorer:who.lost:t">未找到</span>
+<span data-d="install-explorer:game:what">你的游戏文件夹，也就是 Steam 或其他商店安装丝之歌的位置。Stitchwork 把自己的文件夹放在这里，挨着游戏本体，模组管理器的更新永远碰不到它们。</span>
+<span data-d="install-explorer:profile:what">一个 Cogfly 管理器档案。BepInEx 和你添加的所有模组都装在这里，所以每个管理器档案都相当于一份单独装好模组的游戏。</span>
+<span data-d="install-explorer:bep:what">模组加载器。Stitchwork 作为 BepInEx 插件运行。</span>
+<span data-d="install-explorer:bep.plugins:what">插件都放在这里。Stitchwork 也会在这里找资源包：只要文件夹里有一个 Stitchwork/（或 Patchwork/）文件夹，就算一个资源包。</span>
+<span data-d="install-explorer:bep.config:what">所有插件的设置都在这里。</span>
+<span data-d="install-explorer:install.manual:what">你把 Stitchwork 复制进去的那个文件夹。这几个文件要放在一起，你自己的作品别往这里放。文件夹名只是个建议：DLL 放在哪儿，Stitchwork 都能找到自己。旧版本会把你的文件存在这里；“总览 › 立即迁移”会把它们复制到工作区文件夹。</span>
+<span data-d="install-explorer:install.manual:see"><a href="A1-getting-started.html">A1 · 内容介绍</a></span>
+<span data-d="install-explorer:install.mgr:what">Cogfly 从 Thunderstore 安装 Stitchwork 的位置。每次更新时 Cogfly 都会整个替换这个文件夹，所以 Stitchwork 不会在这里存放任何属于你的东西。</span>
+<span data-d="install-explorer:mgr.manifest:what">Thunderstore 的包信息卡：名称、版本和依赖项。</span>
+<span data-d="install-explorer:mgr.icon:what">包在 Thunderstore 上显示的图标。</span>
+<span data-d="install-explorer:mgr.readme:what">包在 Thunderstore 上显示的说明。</span>
+<span data-d="install-explorer:mgr.changes:what">每个版本的更新内容。</span>
+<span data-d="install-explorer:ship.dll:what">Stitchwork 本体。</span>
+<span data-d="install-explorer:ship.bundle:what">Stitchwork 需要用到的着色器。一定要和同一个版本的 DLL 一起安装。</span>
+<span data-d="install-explorer:ship.lang:what">Stitchwork 自己的界面语言：管的是这个模组的菜单和按钮，不是你资源包里的文本。</span>
+<span data-d="install-explorer:ship.license:what">许可证。旁边的 LICENSES/ 里是第三方声明。</span>
+<span data-d="install-explorer:ship.licenses:what">Stitchwork 所用组件的许可证，比如 Tabler 图标。</span>
+<span data-d="install-explorer:cfg:what">Stitchwork 的设置文件。“设置”（按 0 键）会替你写好它。</span>
+<span data-d="install-explorer:cfg:see"><a href="hotkeys.html">热键与设置</a></span>
+<span data-d="install-explorer:state:what">你的资源包设置：资源包的顺序、开了哪些、各自的条件，还有保存过的配置方案。这些都存在 BepInEx 的 config 里，所以每个管理器档案都有自己的一套。</span>
+<span data-d="install-explorer:state:see"><a href="A3-pack-manager.html">A3 · 资源包管理器</a></span>
+<span data-d="install-explorer:state.stats:what">一个小缓存，记着每个资源包的文件数量，好让资源包管理器打开得快一些。它会自己重建。</span>
+<span data-d="install-explorer:state.packs:what">资源包的排序和开关状态，从最上面的开始记。</span>
+<span data-d="install-explorer:state.packs:when">在资源包管理器里点“应用”后出现。</span>
+<span data-d="install-explorer:state.cond:what">你给资源包设的条件：场景、纹章、另一个资源包，等等。</span>
+<span data-d="install-explorer:state.cond:when">在资源包管理器里点“应用”后出现。</span>
+<span data-d="install-explorer:state.profiles:what">你起了名字保存下来的资源包配置方案，一键就能来回切换。</span>
+<span data-d="install-explorer:state.profiles:when">保存一个资源包配置方案后出现。</span>
+<span data-d="install-explorer:data:what">游戏的数据文件夹。</span>
+<span data-d="install-explorer:data.boot:what">Unity 的启动设置。Stitchwork 会在里面加一行，开启增量垃圾回收，让画面更流畅。设置 AutoEnableIncrementalGC = false 再启动一次游戏，这一行就没了。</span>
+<span data-d="install-explorer:data.bootbak:what">Stitchwork 改动之前的 boot.config 备份。</span>
+<span data-d="install-explorer:data.mods:what">Silksong Customizer 存放皮肤的地方。</span>
+<span data-d="install-explorer:data.cust:what">Customizer 的皮肤文件夹。Stitchwork 会把每个皮肤显示成一个资源包，直接在原位置读取，从不改动这些文件夹。</span>
+<span data-d="install-explorer:data.cust:see"><a href="A2-installing-packs.html">A2 · 安装资源包</a></span>
+<span data-d="install-explorer:data.cust.skin:what">一个 Customizer 皮肤。它会和你的 Stitchwork 资源包一起出现在资源包管理器里，用“转换”可以把它变成 Stitchwork 资源包。</span>
+<span data-d="install-explorer:data.cust.active:what">Customizer 用来标记当前启用皮肤的文件。Stitchwork 也靠它来认出一个皮肤。</span>
+<span data-d="install-explorer:data.cust.coll:what">整图，每个精灵图集合一个文件夹，放在皮肤的根目录下。</span>
+<span data-d="install-explorer:data.cust.t2d:what">Texture2D 整图：HUD、菜单和特效。</span>
+<span data-d="install-explorer:mgr.custskin:what">由你的模组管理器安装的 Customizer 皮肤。Stitchwork 靠它的 active.txt 认出它，并把它显示成资源包。</span>
+<span data-d="install-explorer:packs:what">手动安装的资源包都放在这个货架上。不管用哪个管理器档案、用什么方式启动游戏，都能看到它，模组管理器更新也不会碰它。</span>
+<span data-d="install-explorer:packs:see"><a href="A2-installing-packs.html">A2 · 安装资源包</a></span>
+<span data-d="install-explorer:packs.user:what">一个你安装的资源包。只有里面那个 Stitchwork/ 文件夹的名字必须一字不差。</span>
+<span data-d="install-explorer:packs.user:see"><a href="pack-folder-structure.html">资源包目录结构</a></span>
+<span data-d="install-explorer:packs.user.sw:what">Stitchwork 在每个资源包里找的就是这个文件夹。</span>
+<span data-d="install-explorer:pk.json:what">可选，但建议附上：资源包卡片上的名称、作者、版本、简介和封面都来自它。Stitchwork 读的是这个文件，不是 manifest.json。没有它，就用文件夹名；新版本换了文件夹时，玩家的设置也会丢失。</span>
+<span data-d="install-explorer:pk.json:see"><a href="distributing-your-pack.html">发布你的资源包</a></span>
+<span data-d="install-explorer:pk.sprites:what">单张精灵图：每一帧一个 PNG。</span>
+<span data-d="install-explorer:pk.sprites:see"><a href="B7-sprite-paths.html">B7 · 精灵图路径速查</a></span>
+<span data-d="install-explorer:pk.sounds:what">替换用的音效，按原版音频片段名匹配。</span>
+<span data-d="install-explorer:pk.sounds:see"><a href="D1-audio.html">D1 · 音频</a></span>
+<span data-d="install-explorer:pk.text:what">本地化文本，先按表、再按语言分开。</span>
+<span data-d="install-explorer:pk.text:see"><a href="C1-text.html">C1 · 文本与对话</a></span>
+<span data-d="install-explorer:lost:what">Stitchwork 找不到这个资源包。它会在每个资源包里找一个 Stitchwork/ 文件夹，而这些文件放高了一层。在 CrystalHornet/ 里新建一个 Stitchwork/ 文件夹，把它们移进去。</span>
+<span data-d="install-explorer:packs.convert:what">由 Customizer 皮肤转换而来的 Stitchwork 资源包。它一开始是关闭的，什么时候让它接手由你决定。</span>
+<span data-d="install-explorer:packs.convert:when">对 Customizer 皮肤点“转换”后出现。</span>
+<span data-d="install-explorer:mgr.pack:what">由你的模组管理器安装的资源包。它只属于当前管理器档案，每次更新都会被替换掉。</span>
+<span data-d="install-explorer:work:what">你的工作区文件夹。这里的文件不用打成资源包就会直接加载，所以制作和测试都在这里。你的修改、导出的原版资源和其他导出文件都会存到这里。所有启用的资源包优先级都比它高，只有文本和颜色规则例外，这两样以你的为准。</span>
+<span data-d="install-explorer:work:see"><a href="B1-starting-a-skin-pack.html">B1 · 开始制作资源包</a></span>
+<span data-d="install-explorer:work.sprites:what">你的精灵图，目录结构和资源包里的一样。“编辑”和“编译回”都会写到这里。</span>
+<span data-d="install-explorer:work.sprites:see"><a href="B7-sprite-paths.html">B7 · 精灵图路径速查</a></span>
+<span data-d="install-explorer:work.sprites.t2d:what">Texture2D 系统的精灵图：HUD、菜单、特效等等。</span>
+<span data-d="install-explorer:work.sprites.t2d:see"><a href="B4-t2d-sprites.html">B4 · T2D 精灵图</a></span>
+<span data-d="install-explorer:work.sprites.coll:what">一个精灵图集合，名字和游戏里的叫法一样。大黄蜂的集合叫 Knight。</span>
+<span data-d="install-explorer:work.sprites.coll:when">编辑一张精灵图后出现。</span>
+<span data-d="install-explorer:work.sprites.clips:what">贴布绣：只给某一段动画片段用的美术，哪怕其他片段也共用同一张精灵图。</span>
+<span data-d="install-explorer:work.sprites.clips:when">给某段动画片段单独配上美术后出现。</span>
+<span data-d="install-explorer:work.sprites.clips:see"><a href="BEx1-reused-frames.html">BEx1 · 帧复用：一图多动画</a></span>
+<span data-d="install-explorer:work.sprites.wip:what">铺在一张画布上的整段动画，可以直接开画。Stitchwork 从不加载它；“编译回”会把你画好的帧写回去。</span>
+<span data-d="install-explorer:work.sprites.wip:when">在画布上打开一段动画片段后出现。</span>
+<span data-d="install-explorer:work.sprites.wip:see"><a href="B6-animation-canvas.html">B6 · 动画画布</a></span>
+<span data-d="install-explorer:work.sheets:what">整图，适合你手上本来就是一整张大图的美术。</span>
+<span data-d="install-explorer:work.sheets:see"><a href="B3-spritesheets.html">B3 · 移植既有作品</a></span>
+<span data-d="install-explorer:work.sounds:what">替换用的音效，按游戏里的音频片段名匹配。</span>
+<span data-d="install-explorer:work.sounds:see"><a href="D1-audio.html">D1 · 音频</a></span>
+<span data-d="install-explorer:work.videos:what">替换用的过场动画。</span>
+<span data-d="install-explorer:work.videos:see"><a href="E1-video.html">E1 · 视频</a></span>
+<span data-d="install-explorer:work.text:what">你改过的文本。文本编辑器会保存到这里，而且这里的文本优先于所有资源包。</span>
+<span data-d="install-explorer:work.text:see"><a href="C1-text.html">C1 · 文本与对话</a></span>
+<span data-d="install-explorer:work.fonts:what">字体：每个语言槽位一个文件夹，另外 _fallback/ 用来补上游戏字体里缺的字。</span>
+<span data-d="install-explorer:work.fonts:see"><a href="C2-fonts.html">C2 · 字体</a></span>
+<span data-d="install-explorer:work.recolor:what">你的颜色规则。“颜色”模式会替你写好，不用手动编辑。</span>
+<span data-d="install-explorer:work.recolor:see"><a href="B9-colors.html">B9 · 色彩</a></span>
+<span data-d="install-explorer:work.dumps:what">游戏自带的美术、文本和音效，导出来给你做参考。只当参考用，千万别拿去发布。</span>
+<span data-d="install-explorer:work.dumps:see"><a href="dumping.html">资源导出与全量导出</a></span>
+<span data-d="install-explorer:work.dumps.sprites:what">原版精灵图，目录结构和你的 Sprites/ 文件夹一样。</span>
+<span data-d="install-explorer:work.dumps.sheets:what">原版整图。</span>
+<span data-d="install-explorer:work.dumps.text:what">游戏的文本，按文本表和语言分开存放。</span>
+<span data-d="install-explorer:work.dumps.sounds:what">你从游戏里保存下来的音效。</span>
+<span data-d="install-explorer:work.dumps.sounds:when">在“音频”标签页点“导出 WAV”后出现。</span>
+<span data-d="install-explorer:work.lang:what">你给 Stitchwork 界面做的翻译，会叠加在自带的语言之上。</span>
+<span data-d="install-explorer:work.lang:when">在“文本 › 翻译”里翻译界面后出现。</span>
+<span data-d="install-explorer:work.converted:what">拆成单张精灵图的整图。</span>
+<span data-d="install-explorer:work.converted:when">在“实用工具”标签页转换整图后出现。</span>
+<span data-d="install-explorer:work.showcase:what">用你的动画片段做成的 GIF 动图。</span>
+<span data-d="install-explorer:work.showcase:when">点“导出 GIF”后出现。</span>
+<span data-d="install-explorer:work.backups:what">Stitchwork 替你改动文件之前保留的原件，比如清理边缘时留下的。对结果满意后就可以删掉。</span>
+<span data-d="install-explorer:work.backups:when">清理某个资源包的边缘后出现。</span>
+<span data-d="install-explorer:work.doctor:what">资源包体检的报告，每个资源包一份。</span>
+<span data-d="install-explorer:work.doctor:when">给资源包做过体检后出现。</span>
+<span data-d="install-explorer:work.diagnostics:what">来自“实用工具 › 探针”的性能捕获：“捕获堆内存”和“启用 GC 卡顿捕获”都会把报告存到这里。反馈卡顿问题时，可以附上一份。</span>
+<span data-d="install-explorer:work.diagnostics:when">在“实用工具 › 探针”里开始捕获后出现。</span>
+<span data-d="install-explorer:work.audiocat:what">游戏到目前为止播放过的所有音效名，“音频”标签页靠它来列出这些音效。所有管理器档案共用这一份。</span>
+<span data-d="install-explorer:work.audiocat:when">玩一阵子之后出现。</span>
+</div>
+</div>
+<figcaption>Stitchwork 添加的每一个文件夹，手动安装和 Cogfly 管理器档案两种情况都有。打开 Customizer 开关，可以看到 Customizer 皮肤放在哪里。</figcaption></figure>
+<p><strong>总览</strong>面板（按 <code>2</code>）会显示你的工作区文件夹。<strong>浏览…</strong>可以换到别的位置，<strong>立即迁移</strong>会把旧版本放在 DLL 旁边的文件搬过来。资源包内部的文件布局请看<a href="pack-folder-structure.html">资源包目录结构</a>。</p>
+<details>
+<summary>要做图像修改？先来预览一下两种精灵图系统</summary>
+<p>完整的编辑工作流选择请参考 <a href="B0-choosing-a-workflow.html">B0</a>。</p>
+<h3 id="the-two-sprite-systems">两种精灵图系统</h3>
+<p>这是最容易踩坑、也是最值得先了解的一件事：丝之歌的 2D 美术资源使用了两套不同的系统，而资源属于哪一套系统决定了它应该放在哪个文件夹。</p>
+<ul><li><strong>tk2d</strong>（2D Toolkit）——几乎所有带<strong>动画的角色</strong>，例如大黄蜂、敌人和 Boss，都使用 tk2d，并打包在共享图集中。对应文件应放在：<code>Sprites/<wbr>[Collection]/<wbr>[Material]/<wbr></code>。</li><li><strong>Texture2D（“T2D”）</strong>——那个“问题儿童”，什么都要掺一脚：菜单、HUD、特效、技能图标以及部分过场动画画面。它甚至还会让其中一部分动起来，用的是 Unity 自带的 Animator，而不是 tk2d。对应文件应放在 <code>Sprites/T2D/</code> 或 <code>Spritesheets/T2D/</code>。</li></ul>
+<p>不用刻意记住哪些资源使用哪个系统。开发中心的<strong>图形</strong>标签页（按 <code>3</code>）会直接告诉你：<strong>动画</strong>模式显示的是 tk2d；<strong>T2D 贴图</strong>和 <strong>T2D 日志</strong>模式显示的是 Texture2D。（它的第四个模式<strong>颜色</strong>里是颜色规则，详见<a href="B9-colors.html">色彩</a>。）如果某个替换始终没有生效，第一件要检查的就是：<em>它是不是属于另一套精灵图系统？</em></p>
+<blockquote class="note"><p>每个丝之歌皮肤创作者都会遇到的坑：<strong>游戏内部仍然把大黄蜂（Hornet）称作“Knight”</strong>，这是《空洞骑士》遗留下来的命名。所以名称以 <code>Knight_…</code> 开头的精灵图，实际上都是大黄蜂的资源。</p>
+<p>更多术语说明请参阅：<a href="glossary-zh.html">术语表</a>。</p></blockquote>
+</details>
+<h2 id="hot-reload">热重载</h2>
+<p><strong>热重载</strong>的意思是：你的改动会在游戏运行时直接生效。Stitchwork 在运行中的游戏里工作，所以你可以一边玩一边改。想看到改动，不用退出游戏、重新启动，也不用重新读档。</p>
+<p>Stitchwork 会持续监视你的工作区文件夹和资源包文件夹。当你保存图片后，会自动触发重新加载，并重新合成到当前正在使用的图集。片刻之后就会生效：</p>
+<pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>编辑PNG → 保存 → 文件监视器检测到变化 → 重新加载 → 重新合成图集 → 游戏中显示（无需重启）</code></pre>
+<figure class="img"><img src="images/a4-hot-reload.png" alt="从保存 PNG 到显示在屏幕上，无需重启。" loading="lazy"><figcaption>从保存 PNG 到显示在屏幕上，无需重启。</figcaption></figure>
+<p>只有更新 Stitchwork 版本（新的 <code>.dll</code> 文件）时才需要重启游戏。更新资源包内容永远不需要重启。</p>
+<h2 id="when-packs-disagree">当多个资源包修改同一个资源时</h2>
+<p>如果 多个资源包同时替换了同一个精灵图，则由资源包管理器中设置的<strong>优先级</strong>决定最终使用哪个版本。列表位置越高，优先级越高。资源包管理器也会明确显示：哪个资源包最终生效，以及哪个资源包被覆盖。有两个例外始终优先于资源包，这样可以确保你在游戏里做的修改不会被悄悄覆盖：一是工作区文件夹 <code>Text/</code> 里的<strong>文本</strong>（文本标签页的编辑器就保存在这里），二是工作区文件夹 <code>Recolor/</code> 里的<strong>颜色规则</strong>（颜色模式就保存在这里）。规则可能在1.0版本前还有所改动。完整规则请参阅：<a href="Ship-priority-and-conflicts.html">优先级与冲突</a>。</p>
+<h2 id="what-do-you-want-to-change">你想改什么？</h2>
+<ul><li><strong>角色或其他美术：</strong>先看 <a href="B0-choosing-a-workflow.html">B0 · 选择工作流</a>，再跟着 <a href="B1-starting-a-skin-pack.html">B1 · 开始制作资源包</a>完成你的第一次皮肤修改。</li><li><strong>对话或界面文字：</strong><a href="C1-text.html">C1 · 文本与对话</a>。</li><li><strong>音效或音乐：</strong><a href="D1-audio.html">D1 · 音频</a>。</li><li><strong>过场动画：</strong><a href="E1-video.html">E1 · 视频</a>。</li></ul>
+<p>先做一个小小的编辑替换一个常见的素材，在游戏里确认生效，再慢慢扩大项目。具体的编辑步骤，对应的指南会一步步带你走完。等你准备好分享时，再看<a href="distributing-your-pack.html">发布你的资源包</a>；发布相关的细节到那时再管也不迟。</p>
+    <div class="prevnext"><a class="pn prev" href="A3-pack-manager.html"><span>&larr; 上一页</span><b><span class="page-code">A3</span> <span class="page-name">资源包管理器</span></b></a><a class="pn next" href="A5-when-something-looks-wrong.html"><span>下一页 &rarr;</span><b><span class="page-code">A5</span> <span class="page-name">出现异常情况时</span></b></a></div>
+  </article></main>
+  <nav class="toc" aria-label="本页内容"><div class="toc-h">本页内容</div><ul><li class="lvl2"><a href="#replacement-happens-at-load-time">替换发生在资源加载时</a></li><li class="lvl2"><a href="#your-working-files">你的工作文件</a></li><li class="lvl3"><a href="#the-two-sprite-systems">两种精灵图系统</a></li><li class="lvl2"><a href="#hot-reload">热重载</a></li><li class="lvl2"><a href="#when-packs-disagree">当多个资源包修改同一个资源时</a></li><li class="lvl2"><a href="#what-do-you-want-to-change">你想改什么？</a></li></ul></nav>
+</div>
+
+<script src="../assets/demos.js"></script>
+
+<script src="../assets/app.js"></script></body></html>

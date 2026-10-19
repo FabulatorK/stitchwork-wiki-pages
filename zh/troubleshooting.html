@@ -1,0 +1,160 @@
+<!doctype html><html lang="zh"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="stitchwork-version" content="0.9.0">
+<title>问题自查 &middot; Stitchwork 维基</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/treats/treats.css"></head><body data-mod="reference">
+<header class="topbar">
+  <div class="topbar-inner">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  <a class="brand" href="index.html">Stitchwork <span>维基</span></a>
+  <span class="wiki-ver" title="适用于 Stitchwork 0.9.0">0.9.0</span>
+  <div class="reading" id="reading" aria-hidden="true"><span class="reading-label" id="readingLabel"></span><span class="reading-track"><span class="reading-fill" id="readingFill"><svg class="reading-needle" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c-.667 -.667 3.262 -6.236 11.785 -16.709a3.5 3.5 0 1 1 5.078 4.791c-10.575 8.612 -16.196 12.585 -16.863 11.918"/><path d="M17.5 6.5l-1 1"/><path d="M17 7c-2.333 -2.667 -3.5 -4 -5 -4s-2 1 -2 2c0 4 8.161 8.406 6 11c-1.056 1.268 -3.363 1.285 -5.75 .808"/><path d="M5.739 15.425c-1.393 -.565 -3.739 -1.925 -3.739 -3.425"/><path d="M19.5 9.5l1.5 1.5"/></svg></span></span></div>
+  <div class="topbar-right">
+    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="../en/troubleshooting.html">English</option><option value="" selected>中文 · ~100%</option></select>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"><span class="theme-ico" aria-hidden="true">&#9680;</span></button>
+  </div>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"><input class="search" id="search" type="search" placeholder="筛选页面…" aria-label="筛选页面…"><nav class="nav"><details class="nav-sec" data-mod="foundations"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12l0 9"/><path d="M12 12l-8 -4.5"/><path d="M16 5.25l-8 4.5"/></svg><span class="sec-name" title="A-基础">A-基础</span><span class="sec-n">7</span></summary><ul><li><a href="A0-about-stitchwork.html"><span class="page-code">A0</span> <span class="page-name">关于绣补</span></a></li><li><a href="A1-getting-started.html"><span class="page-code">A1</span> <span class="page-name">内容介绍</span></a></li><li><a href="A2-installing-packs.html"><span class="page-code">A2</span> <span class="page-name">安装资源包</span></a></li><li><a href="A3-pack-manager.html"><span class="page-code">A3</span> <span class="page-name">资源包管理器</span></a></li><li><a href="A4-how-stitchwork-works.html"><span class="page-code">A4</span> <span class="page-name">Stitchwork 工作原理</span></a></li><li><a href="A5-when-something-looks-wrong.html"><span class="page-code">A5</span> <span class="page-name">出现异常情况时</span></a></li><li class="extra"><a href="AEx1-conditional-activation.html"><span class="page-code">AEx1</span> <span class="page-name">条件激活<span class="ex-tag">附加</span></span></a></li></ul></details><details class="nav-sec" data-mod="graphics"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h.01"/><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"/><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"/><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"/></svg><span class="sec-name" title="B-图像">B-图像</span><span class="sec-n">11</span></summary><ul><li><a href="B0-choosing-a-workflow.html"><span class="page-code">B0</span> <span class="page-name">选择工作流</span></a></li><li><a href="B1-starting-a-skin-pack.html"><span class="page-code">B1</span> <span class="page-name">开始制作资源包</span></a></li><li><a href="B2-finding-any-sprite.html"><span class="page-code">B2</span> <span class="page-name">查找任意精灵图</span></a></li><li><a href="B3-spritesheets.html"><span class="page-code">B3</span> <span class="page-name">移植既有作品：整表与 CKC</span></a></li><li><a href="B4-t2d-sprites.html"><span class="page-code">B4</span> <span class="page-name">T2D 精灵图</span></a></li><li><a href="B5-anchors.html"><span class="page-code">B5</span> <span class="page-name">更大的画幅：锚点</span></a></li><li><a href="B6-animation-canvas.html"><span class="page-code">B6</span> <span class="page-name">动画画布工作流</span></a></li><li><a href="B7-sprite-paths.html"><span class="page-code">B7</span> <span class="page-name">精灵图路径速查</span></a></li><li><a href="B8-animation-controller.html"><span class="page-code">B8</span> <span class="page-name">动画控制台</span></a></li><li><a href="B9-colors.html"><span class="page-code">B9</span> <span class="page-name">色彩</span></a></li><li class="extra"><a href="BEx1-reused-frames.html"><span class="page-code">BEx1</span> <span class="page-name">帧复用：一图多动画<span class="ex-tag">附加</span></span></a></li></ul></details><details class="nav-sec" data-mod="text"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9h8"/><path d="M8 13h6"/><path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3z"/></svg><span class="sec-name" title="C-文本">C-文本</span><span class="sec-n">2</span></summary><ul><li><a href="C1-text.html"><span class="page-code">C1</span> <span class="page-name">文本与对话</span></a></li><li><a href="C2-fonts.html"><span class="page-code">C2</span> <span class="page-name">字体：修复缺字方框</span></a></li></ul></details><details class="nav-sec" data-mod="audio"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8a5 5 0 0 1 0 8"/><path d="M17.7 5a9 9 0 0 1 0 14"/><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"/></svg><span class="sec-name" title="D-音频">D-音频</span><span class="sec-n">1</span></summary><ul><li><a href="D1-audio.html"><span class="page-code">D1</span> <span class="page-name">音频</span></a></li></ul></details><details class="nav-sec" data-mod="video"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M8 4l0 16"/><path d="M16 4l0 16"/><path d="M4 8l4 0"/><path d="M4 16l4 0"/><path d="M4 12l16 0"/><path d="M16 8l4 0"/><path d="M16 16l4 0"/></svg><span class="sec-name" title="E-视频">E-视频</span><span class="sec-n">1</span></summary><ul><li><a href="E1-video.html"><span class="page-code">E1</span> <span class="page-name">视频</span></a></li></ul></details><details class="nav-sec" data-mod="ship"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21l-8 -4.5v-9l8 -4.5l8 4.5v4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12v9"/><path d="M12 12l-8 -4.5"/><path d="M15 18h7"/><path d="M19 15l3 3l-3 3"/></svg><span class="sec-name" title="F-发布">F-发布</span><span class="sec-n">2</span></summary><ul><li><a href="Ship-priority-and-conflicts.html"><span class="page-name">优先级与冲突</span></a></li><li><a href="distributing-your-pack.html"><span class="page-name">发布你的资源包</span></a></li></ul></details><details class="nav-sec cur" data-mod="reference" open><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"/><path d="M19 16h-12a2 2 0 0 0 -2 2"/><path d="M9 8h6"/></svg><span class="sec-name" title="G-参考">G-参考</span><span class="sec-n">8</span></summary><ul><li><a href="dumping.html"><span class="page-name">资源导出与全量导出</span></a></li><li><a href="companion-mods.html"><span class="page-name">配套模组</span></a></li><li><a href="code-mod-api.html"><span class="page-name">面向代码模组的 API</span></a></li><li><a href="testing-with-savestates.html"><span class="page-name">存档状态测试（DebugMod）</span></a></li><li><a href="glossary-zh.html"><span class="page-name">术语表（简体中文）</span></a></li><li><a href="hotkeys.html"><span class="page-name">热键</span></a></li><li><a href="pack-folder-structure.html"><span class="page-name">资源包目录结构</span></a></li><li class="active"><a href="troubleshooting.html"><span class="page-name">问题自查</span></a></li></ul></details></nav></aside>
+  <main class="content"><article>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">首页</a> <span>&rsaquo;</span> <a class="crumb-mod" href="index.html#Reference"><svg class="mi" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"/><path d="M19 16h-12a2 2 0 0 0 -2 2"/><path d="M9 8h6"/></svg>G-参考</a> <span>&rsaquo;</span> <span aria-current="page">问题自查</span></nav>
+    <header class="page-head"><h1><span class="page-name">问题自查</span></h1><div class="page-tags"><span class="read-time" title="预计阅读时间"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>阅读约 15 分钟</span></div><div class="page-dates">适用于 Stitchwork 0.9.0 &middot; 更新于: 2026-10-19</div></header>
+    <blockquote class="note"><p><strong>参考 · 面向所有人</strong><br>有什么地方不对劲？来这里找找。<br>常见情况在前，少见情况在后。<br>页面最后会说明应该怎样提交一份有用的问题报告。</p></blockquote>
+<h2 id="i-don-t-see-anything-happen-stitchwork-isn-t-running">“我没看到任何变化 —— Stitchwork 压根没在运行”</h2>
+<p>把鼠标移到屏幕顶部边缘。如果<strong>资源包</strong>标签页滑了下来，说明 Stitchwork 正在运行。如果你关掉了<strong>顶部标签页</strong>，就改按 <code>1</code>。你也可以在 <code>BepInEx/LogOutput.log</code> 里搜索这一行：<code>Stitchwork is loaded! Version: X.Y.Z (build …)</code>。找不到这一行，就说明 Stitchwork 没有加载。</p>
+<p>左下角的<strong>状态角标</strong>不适合拿来判断。它的眼睛图标可以把它收到屏幕左边缘外面，<strong>设置</strong>里的<strong>状态栏</strong>开关可以把它关掉；在场景内选取期间，以及 DebugMod 的面板显示时，它也会隐藏。</p>
+<p>最常见的原因：你还装着旧模组 <strong>Patchwork</strong>。Stitchwork 会察觉到这一点，并在这次游戏期间关闭自己。主菜单右下角会有一条提示说明这件事，标题是 <strong>Stitchwork is off this session</strong>：</p>
+<figure class="img"><img src="../en/images/ts-inactive-toast.png" alt="Patchwork 也装着时，这条提示会一直停在主菜单右下角。点击 Got it 会关闭提示，直到这次游戏结束，Stitchwork 都保持关闭" loading="lazy"><figcaption>Patchwork 也装着时，这条提示会一直停在主菜单右下角。点击 Got it 会关闭提示，直到这次游戏结束，Stitchwork 都保持关闭</figcaption></figure>
+<p>解决办法：从 <code>BepInEx/plugins/</code> 中删除 <code>Patchwork.dll</code>。注意，<strong>Architect-Silksong 并不依赖 Patchwork</strong>，可以和 Stitchwork 正常共存——只有单独安装的 Patchwork 才会让 Stitchwork 进入停用模式。</p>
+<p>其他原因：</p>
+<ul><li><strong>根本没装 BepInEx。</strong>Stitchwork 是 BepInEx 插件——没有 BepInEx 5，它就无法加载。检查游戏文件夹里有没有 <code>BepInEx/core/BepInEx.dll</code>。</li><li><strong>Stitchwork 放错了位置。</strong>它的 DLL 必须放在 <code>BepInEx/plugins/</code> 下一级的某个文件夹里（推荐命名为 <code>StitchworkRoot/</code>）。文件夹叫什么本身无所谓——Stitchwork 会根据 DLL 加载的位置找到自己——但 DLL 不能直接散放在 <code>plugins/</code> 里，也不能藏在更深的子目录中。</li><li><strong>启动时出现了异常。</strong>打开 <code>BepInEx/LogOutput.log</code>，搜索 <code>Stitchwork</code>。插件 <code>Awake</code> 期间出现的错误会记在那里。</li></ul>
+<hr>
+<h2 id="black-screen-at-launch-the-game-never-reaches-the-menu">“启动后黑屏 —— 游戏一直进不了菜单”</h2>
+<p>如果日志开头附近有这些内容：</p>
+<pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>Invalid path in TextDataProvider : '…/StreamingAssets/aa/settings.json'
+RuntimeData is null.  Please ensure you have built the correct Player Content.
+InvalidKeyException: … No Location found for Key=Scenes/Pre_Menu_Intro</code></pre>
+<p>那么问题出在<strong>游戏本身的安装</strong>上，而不是 Stitchwork。丝之歌的所有内容都要通过 <code>settings.json</code> 这个资源目录来加载；它丢失或损坏时，游戏连自己的主菜单都加载不出来，只能一直停在黑屏上。出现这种情况，通常是因为游戏文件被直接修改或替换过（一些旧的换皮方法就是这么做的），或者安装文件损坏了。</p>
+<p><strong>修复方法：在 Steam 里右键点击游戏，依次选择属性 › 已安装文件 › 验证游戏文件的完整性。</strong><br>然后移除所有直接替换游戏文件的模组。Stitchwork 从不碰 <code>StreamingAssets/</code> 里的游戏资源文件本身 —— 它在内存里提供替换资源，也正因为如此，Steam 验证文件不会弄坏你的资源包。</p>
+<hr>
+<h2 id="menus-press-left-right-by-themselves-and-confirm-acts-as-cancel">“菜单自己左右乱跳——确认键还变成了取消”</h2>
+<p>就像有一只看不见的手，一直把菜单选项往左右拨；按确认却变成了取消；可每个设置界面都告诉你，按键绑定完全正确。绑定确实没问题——只是游戏同时在听<strong>两个手柄</strong>的输入，而其中一个可能是假的。</p>
+<p>线索可以在 <code>BepInEx/LogOutput.log</code> 的开头附近找到：</p>
+<pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>Joystick connected ("Controller (XBOX 360 For Windows)").</code></pre>
+<p>如果你并没有 Xbox 手柄，这个设备就是<strong>虚拟</strong>的——它是你真实手柄经过转译后的“分身”。游戏会同时接收两者的输入：分身的摇杆没有回中，于是出现了凭空而来的左右输入；两者的按键布局不同（叉/圈与 A/B），于是确认和取消对调了。</p>
+<p>你电脑上有某个东西创建了这个分身。常见的“嫌疑人”依次是：</p>
+<ul><li><strong>在游戏里初始化 Steamworks 的模组。</strong> 已确认的例子：<strong>SSMP</strong>（多人联机模组，0.3.1 及更早版本）——它启动时调用的 <code>SteamAPI.Init()</code> 会重新启用 Steam 的手柄转译，即使你已经为这个游戏关闭了 Steam 输入（问题已经反馈给模组作者）。删掉这个模组（或者先停用，等真要开房联机时再启用），分身就会消失。</li><li><strong>手柄转译软件</strong>——DS4Windows、reWASD、BetterJoy 这类软件，本来就是靠创建虚拟 Xbox 手柄来工作的。打开它们的“隐藏真实手柄”选项，或者直接关掉它们。</li><li><strong>Steam 远程畅玩</strong>——连接进来的客户端会得到虚拟手柄，这些手柄只在游戏运行时存在，而且不受单个游戏的 Steam 输入设置约束。到 Steam › 设置 › 远程畅玩里检查已配对的设备。</li></ul>
+<p>不管是哪一种，验证方法都一样：找到原因 → 下次启动时日志里不再出现 <code>Joystick connected</code> 这一行 → 菜单恢复正常。</p>
+<h3 id="another-mod-s-ui-eventsystem">某个模组的 UI EventSystem</h3>
+<p><strong>另一个完全不同的原因</strong>也会造成同样的症状，但日志里<em>没有</em> <code>Joystick connected</code> 这一行——通常要从游戏中退回主菜单之后才会出现：某个模组的 <strong>UI EventSystem</strong>。模组可以为自己的窗口再创建一个 EventSystem。如果这个 EventSystem 在窗口关闭后仍然处于激活状态，它就可能操控游戏的菜单。如果你在用 Stitchwork 0.8.1，请更新：这个版本有这个问题。</p>
+<p>要找出是哪个模组，就去日志里找 <code>[ESWatch]</code> 开头的行，它们一直开着。每次菜单的控制权发生变化，都会有一行写出当前掌握控制权的 EventSystem。如果是另一个 EventSystem 在操控菜单，下面的第二行就是警告：</p>
+<pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>[ESWatch] current '&lt;path&gt;' (&lt;module&gt;, navigation on|off) …
+[ESWatch] '&lt;path&gt;' (…) is current with navigation on, not the game's EventSystem: a controller can act by itself in the menus.</code></pre>
+<p>警告里的那个名字就是原因所在。（<code>[InputProbe]</code> 行只在资源包面板打开时才会出现。）</p>
+<h3 id="a-stitchwork-window-in-the-main-menu">在主菜单用过 Stitchwork 的窗口</h3>
+<p><strong>第三种情况：</strong>在主菜单用过 Stitchwork 的窗口，同时还装了另一个自带窗口的模组（例如 UnityExplorer）。从 0.9.0 起，Stitchwork 的窗口关闭时，会把菜单交还给游戏。如果你用的是更早的版本，请更新。如果手柄还是会自己乱动，先别重启游戏。发送 <code>BepInEx/LogOutput.log</code>：每当菜单的控制权发生变化，日志里都会有一行 <code>[ESWatch]</code>。</p>
+<div class="treat" data-treat="quote-ghosts"><div class="tr-quote"><div class="seat"><div class="stage" role="img" aria-label="迷瘴里的丝魂"><span class="tr-anim" data-anim="wraith_fight" data-pivot data-scale="0.316" style="left: 147px; bottom: 66px"></span></div></div>
+<div><blockquote class="post"><img class="av" data-art="quote_avatar" alt="">
+<div><p class="who"><b>little bomey</b> <span>@everydruidwaswr</span> <span class="d"><span class="dot">·</span> May 1, 2020</span></p>
+<p class="txt">fighting ghosts: never fun</p></div></blockquote></div></div>
+</div>
+<hr>
+<h2 id="i-can-t-type-into-stitchwork-s-fields-while-unityexplorer-is-open">“开着 UnityExplorer 时，没法在 Stitchwork 的输入框里打字”</h2>
+<p>默认情况下，UnityExplorer（或 CinematicUnityExplorer）的菜单显示时，Stitchwork 会主动让位：它的面板会关闭，它的按键也什么都打不开。Explorer 默认一启动就显示菜单。按 <kbd>F7</kbd> 把菜单隐藏，Stitchwork 就回来了。</p>
+<p>想让两边同时开着，就到<strong>设置</strong> › <strong>常规</strong>里关掉<strong>为 UnityExplorer 让位</strong>（只有装了这两个模组之一时，这一项才会出现）。这样一来，Explorer 的菜单显示期间，Stitchwork 的文本框会显示光标，但不理会你的输入。把菜单隐藏（<kbd>F7</kbd>）后再输入，文本框就能正常使用了。</p>
+<hr>
+<h2 id="conflicting-plugin-detected-customizer">“日志里出现 Conflicting plugin detected: 'Customizer'”</h2>
+<p>如果日志里有 <strong>"Conflicting plugin detected: 'Customizer'"</strong>（或者其他 Customizer 附属模组），请把这些 DLL 从 <code>BepInEx/plugins/</code> 中删除。它们和 Stitchwork 修改的是同一批精灵图钩子，两边会互相冲突（精灵图出错、敌人行为异常）。Stitchwork 能做同样的事，所以可以放心移除它们。其他需要移除的模组，见<a href="A1-getting-started.html#already-using-patchwork-or-customizer">入门指南</a>。</p>
+<hr>
+<h2 id="i-dropped-a-sprite-png-in-but-nothing-changed">“我放进了一张精灵图 PNG，但什么都没变”</h2>
+<p>也就是常说的“精灵图替换没显示”——新手创作者问得最多的问题。</p>
+<h3 id="check-the-file-path">检查文件路径</h3>
+<p>路径很关键。常见的错误有：</p>
+<ul><li><strong>写成了 <code>Sprite/</code>，而不是 <code>Sprites/</code></strong>——注意结尾的 <code>s</code>。可以相信Stitchwork自己生成的文件夹名。</li><li><strong>集合名称不对</strong>——不区分大小写，但必须和游戏里的集合一致。可以在<strong>图形</strong> › <strong>动画</strong>里核对准确的名称。</li><li><strong>材质名称不对</strong>——同上。</li><li><strong>精灵图名称不对</strong>——文件名（不含 <code>.png</code>）必须和精灵图名称一致。<code>Idle_0.png</code> 和 <code>idle_0.png</code> 都可以；<wbr><code>idle 0.png</code>（带空格）和 <code>idle-0.png</code>（带短横线）就不行。</li><li><strong>扩展名是大写的 <code>.PNG</code></strong>——通常没问题，但在区分大小写的文件系统上会失效。保险起见，用小写的 <code>.png</code>。</li></ul>
+<h3 id="did-the-file-watcher-pick-it-up">文件监视器发现它了吗？</h3>
+<p>Stitchwork 支持热重载——文件改动会被检测到，片刻后就会生效。如果文件路径没错，游戏却没有读取它：</p>
+<ul><li>试着切换一次场景（穿过一扇门）。载入场景时，所有替换都会无条件地重新应用一遍。</li><li>在资源包管理器（<strong>资源包</strong>）里关掉这个资源包，点击<strong>应用</strong>。再打开这个资源包，然后再点一次<strong>应用</strong>。</li><li>查看 <code>BepInEx/LogOutput.log</code>——在你保存文件的那个时间点附近，找 <code>[Stitchwork]</code> 开头的条目。你应该能看到一行和“reload”有关的日志。</li></ul>
+<h3 id="is-the-sprite-actually-visible-right-now">那一帧现在在屏幕上吗？</h3>
+<p>如果角色正在播放动画，显示的是另一帧，你替换的图要等那一帧播放时才会出现。等对应的帧出现在屏幕上（待机、攻击到一半、某个特定表情）再看。</p>
+<p>对于由 Animator 驱动、每帧都在变化的精灵图，每次显示那一帧时，都会应用一次替换。</p>
+<h3 id="does-a-short-effect-still-show-vanilla-art">短暂的特效还是原版美术？</h3>
+<p>有些特效只存在不到一秒，Stitchwork 可能会漏掉它们。打开 <strong>实用工具</strong> › <strong>探针</strong> › <strong>高级选项</strong>。在 <strong>扫描刷新间隔（秒）</strong> 下方，点击 <strong>默认 · 0.05</strong>。这会把 <code>UninitCheckCacheRefreshSeconds</code> 设为 <code>0.05</code>，也就是现在的默认值。旧版本保存的配置会保留原来的值 <code>0.30</code>。数值越低，越早发现短暂的特效。如果改完之后，东西多的房间开始卡顿，就把滑杆拖到更高的值，比如 <code>0.30</code>。改动会立即生效。</p>
+<hr>
+<h2 id="white-specks-around-the-edges-of-my-art">“我的美术边缘有白色斑点”</h2>
+<p>在游戏里，你的美术轮廓边缘有一圈细小的白色或浅色斑点。可在绘图软件里，同一张图看起来干干净净。</p>
+<p><strong>为什么会这样？</strong> PNG 的每个像素都有颜色和透明度。完全透明的像素虽然看不见，但它仍然带着颜色。Clip Studio Paint 会把这个颜色误存成白色。游戏绘制你的美术时，会把每个边缘像素和它旁边的像素混合，让边缘看起来更平滑。混合时也会用到那些看不见的像素的颜色，于是藏起来的白色就混进了轮廓里：</p>
+<div class="table-wrap"><table><thead><tr><th>美术的边缘像素</th><th>旁边看不见的像素</th><th>游戏里的边缘</th></tr></thead><tbody><tr><td>深红色</td><td>白色（Clip Studio Paint 存进去的）</td><td>浅色斑点</td></tr><tr><td>深红色</td><td>深红色（清理之后）</td><td>深红色，没有斑点</td></tr></tbody></table></div>
+<p>游戏自带的美术没有这个问题。</p>
+<p><strong>那该怎么办？</strong> 找到符合你情况的那一种：</p>
+<ol><li><strong>如果你只玩游戏和使用皮肤，</strong> 那就什么都不用做。<strong>设置</strong> › <strong>渲染</strong>中的<strong>清理精灵图边缘（CSP 修复）</strong> 会在你的游戏里去掉这些斑点，而且默认开启。你的文件不会有任何改动。</li><li><strong>你在制作资源包。</strong> 分享之前，先清理文件试试。点击体检按钮（资源包卡片上的听诊器图标）。如果报告发现了边缘偏浅的 PNG，资源包管理器会询问是否帮你清理这些文件。清理会把每个看不见的边缘像素，改成旁边美术的颜色。美术看起来和原来一样，而每位玩家都能看到干净的边缘，关掉了这项设置的玩家也不例外。Stitchwork 会先把每个要修改的文件复制到你工作区文件夹下的 <code>Backups/clean-edges/</code>以备份。详细说明请看<a href="A3-pack-manager.html#light-sprite-edges">资源包管理器</a>。</li><li><strong>你想在绘图软件里解决。</strong> 用选区工具（比如套索工具）只选中轮廓上出现斑点的那一段。然后对选区应用一次强度较低的高斯模糊。模糊会让轮廓在一两个像素内逐渐淡出。这样一来，游戏只会把藏起来的白色和几乎透明的像素混合，斑点就会变得非常淡。模糊也会让轮廓稍微变软，所以选区要小，强度要低。藏起来的白色仍然留在文件里：第 2 种做法的清理，才是彻底的解决办法。</li></ol>
+<hr>
+<h2 id="the-game-stops-for-a-moment-when-a-pack-applies">“应用资源包时，游戏会停顿一下”</h2>
+<p>进度条走动期间，游戏会继续运行：Stitchwork 在帧与帧之间分成很多小步读取资源包图片，屏幕上正在显示的美术会最先载入。最后一步 <strong>正在收尾…</strong> 会重新载入音频、文本和字体，每帧处理一部分。这一步仍然可能让游戏短暂停顿。日志会写明是哪一部分慢，所以如果停顿得很久，请发送 <code>LogOutput.log</code>。</p>
+<p>每次应用只会处理有变化的部分：文件没有变化的图集和音频会保持原样。</p>
+<p>设置文件中 <code>[Performance]</code> 下的 <code>SlicedReloadBudgetMs</code>，决定应用过程每帧最多能占用多少时间（默认 <code>12</code> 毫秒）。数值越高，应用得越快，但应用期间的帧率也越低。</p>
+<hr>
+<h2 id="some-text-is-invisible-garbled-after-a-pack-apply">“应用资源包后，有些文字消失了或变成了乱码”</h2>
+<p>症状：应用了某个资源包之后，有些文字显示成方框（□□□）、乱码，或者干脆不见了。</p>
+<ul><li><strong>替换文本里出现方框</strong>（比如译文、生僻字，或者游戏从来不用的文字系统），说明游戏字体里没有这些字符。把一个包含这些字符的字体放进 <code>Fonts/_fallback/</code>；参见<a href="C2-fonts.html">字体：修复缺字方框</a>。一个全新的字符第一次出现时，可能会显示成方框，持续大约两秒；这是字形烘焙还没跟上，不是出错了。</li><li><strong>旧资源包里有名字像字体的 T2D 文件</strong>（<code>font.png</code> 之类），以前会让所有系统文字变成乱码。现在 Stitchwork 拒绝替换字体图集，所以这种情况不会再发生了；不过，按这类文件真正要替换的图集给它们重新命名，仍然是个好习惯。</li></ul>
+<p>如果还是看到乱码：</p>
+<ol><li>一次关掉一个资源包，每改一次都点击<strong>应用</strong>，找出是哪一个资源包出了问题。</li><li>提交 Bug 报告，写明资源包名称和你看到的现象（见下文的“提交有用的 Bug 报告”）。</li></ol>
+<hr>
+<h2 id="two-packs-target-the-same-thing-what-wins">“两个资源包改了同一个东西——谁会生效？”</h2>
+<p>优先级更高的那个。在资源包管理器里，资源包按优先级从上到下排列。调整优先级：在资源包管理器里把资源包卡片往上或往下拖。调整顺序之后，点击<strong>应用</strong>。</p>
+<div id="my-pack-used-to-work-and-now-doesn-t-after-i-added-another-pack"></div>
+<p><strong>加了另一个资源包之后，原来的资源包不管用了。</strong>很可能是新资源包覆盖了相同的文件。<strong>被覆盖</strong>折叠栏会列出两个或更多资源包修改了同一项资源的地方，并告诉你哪个资源包盖过了哪个。左下角的<strong>状态角标</strong>会在数量大于零时显示“<em>n</em> 项被覆盖”——可以拿它粗略看看“我现在的配置有多乱”。</p>
+<p>如果新资源包本来不该覆盖你那个资源包修改的内容，那就是新资源包的 Bug——它的文件命名有误，或者修改的范围比作者原本打算的更大。请把问题报告给那个资源包的作者。</p>
+<hr>
+<h2 id="a-stitchwork-panel-is-stuck-somewhere-weird">“Stitchwork 的面板卡在了奇怪的位置”</h2>
+<p>双击面板的标题栏：面板就会回到它的默认位置。拖动没法把面板拖出屏幕，因为它总有一部分会留在画面里。贴着屏幕边缘卷起的面板不能移动：先把它展开。浮动面板卷成一根标题条后，仍然可以拖着标题条移动。</p>
+<p>如果这样还不行，关掉游戏，编辑 <code>BepInEx/<wbr>config/<wbr>Stitchwork.cfg</code> 里的 <code>[GUI]</code> 部分：</p>
+<ul><li>资源包面板：把 <code>CanvasPMX</code> 和 <code>CanvasPMY</code> 设为 <code>0</code>。</li><li>开发中心的面板：把 <code>DevHubPanels</code> 清空。</li></ul>
+<p>如果面板里一片空白，或者界面不再响应，重启游戏之前先把日志复制出来，然后发送它——这种问题值得报告。面板丢失、点击没有传到面板上，或者 Stitchwork 出错时，它会自动把界面的快照写进日志。</p>
+<hr>
+<h2 id="my-stitchwork-panels-vanished">“我的 Stitchwork 面板不见了”</h2>
+<ul><li><strong>DebugMod 的面板出现了。</strong>它们会关闭 Stitchwork 的面板。它们显示期间，Stitchwork 的按键什么都打不开，并且会有一条提示说明这一点。用 DebugMod 的切换键隐藏它的面板，然后再按一次标签页对应的按键。参见<a href="companion-mods.html#debugmod">配套模组</a>。</li><li><strong>另一个模组的菜单开着。</strong>遇到 Benchwarp 的菜单、FsmMaster 的叠加层、Architect 的编辑模式和 UnityExplorer 的菜单时，Stitchwork 也会用同样的方式让位。这时按 Stitchwork 的按键，会弹出一条提示，告诉你该怎么做。参见<a href="companion-mods.html">配套模组</a>。</li><li><strong>你打开了另一个窗口。</strong>资源包、设置和开发中心的面板永远不会同时显示：打开其中一个，其他的就会关闭。资源包面板会保留你暂存的更改。</li><li><strong>点右键把它们卷起来了。</strong>卷起的面板会变成屏幕边缘的一根细条，上面显示着面板的名称。再点一次右键，或者点击这根细条，就能把它展开。</li><li><strong>在 Stitchwork 里，Esc 不会关闭或取消任何东西。</strong>Esc 归游戏使用，所以它会打开游戏的菜单。想在 Stitchwork 里取消，请点右键。</li></ul>
+<hr>
+<h2 id="audio-replacement-plays-the-wrong-audio-cuts-off-restarts">“替换的音频播错了/被截断/从头重播”</h2>
+<div class="table-wrap"><table><thead><tr><th>症状</th><th>原因</th><th>怎么办</th></tr></thead><tbody><tr><td>一次性音效先播一次原版，之后才播你的替换</td><td>启用资源包后，某个声音第一次触发时出现这种情况是正常的。Stitchwork 需要异步载入替换音频，而第一次触发时，载入还没完成。之后的触发都会使用已经缓存好的替换。</td><td>不用做什么。如果第一次之后还是这样，请提交 Bug 报告。</td></tr><tr><td>切换场景时音乐从头开始</td><td>一个老 Bug，已经修好了。</td><td>如果当前版本还会这样，请提交 Bug 报告。</td></tr><tr><td>切换资源包后，音乐还在播放旧的曲目</td><td>循环播放的音频，在它的 AudioClip 被重新指定时，不会重新读取缓冲区。对于文件有变化的循环曲目，Stitchwork 会强制干净地切换一次（Stop+Play），所以这个问题应该已经解决了。</td><td>如果你还是遇到了，请提交 Bug 报告。</td></tr></tbody></table></div>
+<p>文件没有变化的曲目，在应用时会一直播放下去。</p>
+<hr>
+<h2 id="my-anchors-txt-file-stopped-doing-anything">“我的 <code>anchors.txt</code> 文件不起作用了”</h2>
+<p><code>anchors.txt</code> 已经不再读取。Stitchwork 发现这个文件时，会记录一次警告。现在，锚点写在 PNG 文件名末尾的标签里：<code>@t</code> 顶部、<wbr><code>@l</code> 左侧、<wbr><code>@r</code> 右侧、<wbr><code>@c</code> 居中，不加标签（或者 <code>@b</code>）则是默认的底部。请按这个规则重新命名你的精灵图 PNG，然后删除 <code>anchors.txt</code>。完整的迁移步骤请看<a href="B5-anchors.html">更大的画幅：锚点</a>。</p>
+<hr>
+<h2 id="filing-a-useful-bug-report">提交有用的 Bug 报告</h2>
+<p>一份有用的 Bug 报告包括：</p>
+<ol><li><strong>Stitchwork 版本。</strong>看资源包面板或<strong>设置</strong>的页脚（“Stitchwork X.Y.Z”），或者日志里的这一行：<code>Stitchwork is loaded! Version: X.Y.Z (build …)</code>。日志里的这一行还会写明具体是哪个构建。</li><li><strong>你做了什么。</strong>写出导致 Bug 的具体步骤。“我打开游戏的时候它崩了”远不如“我读档之后走进灰沼时出的问题”有用。</li><li><strong>你预期的结果，和实际发生了什么。</strong></li><li><strong>装了哪些其他模组。</strong>把它们列出来——尤其是会改动精灵图、音频或文本加载的模组。很多 Bug 都是模组之间相互影响造成的。</li><li><strong>日志文件。</strong>如果 <code>BepInEx/LogOutput.log</code> 大小合适，就把它附上（太大的话先压缩成 zip）。没有日志，我们只能靠猜。要找到它，打开<strong>设置</strong> › <strong>高级选项</strong>，点击<strong>在文件夹中显示</strong>。BepInEx 文件夹会打开，在 Windows 和 macOS 上还会选中日志文件。每次启动游戏都会覆盖这个文件，所以重启之前先把它复制出来。</li><li><strong>截图或短视频。</strong>画面方面的 Bug 尤其需要——“文字乱码了”配上一张截图，准确地展示乱码是什么样子，就清楚得多。</li></ol>
+<p>正常启动时，日志大致是这样（摘自真实日志，路径已缩短）：</p>
+<pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>[Info   :   BepInEx] Loading [Stitchwork 0.9.0]
+[Info   :Stitchwork] Stitchwork is loaded! Version: 0.9.0 (build …, dll written 2026-10-16 04:54 UTC)
+[Info   :Stitchwork] [Stitchwork] Install root: &lt;profile&gt;\BepInEx\plugins\SilksongSkinCreators-Stitchwork
+[Info   :Stitchwork] [Stitchwork] Working folder: &lt;Game folder&gt;\Stitchwork
+[Info   :Stitchwork] [PackManager] Global packs root: &lt;Game folder&gt;\Packs — 34 pack(s)
+[Info   :Stitchwork] [VideoHandler] Reload: 1 video replacement(s) — 0 from pack(s), 1 from root (&lt;Game folder&gt;\Stitchwork\Videos): Intro_Cinematic
+[Info   :Stitchwork] [Audio] Reload: kept 0 unchanged clip(s); 2 to load.
+[Info   :Stitchwork] [Health] 9 OK — all checks green.
+[Info   :Stitchwork] [Scene] 'Menu_Title' loaded
+[Info   :Stitchwork] [SpriteLoader] Index rebuilt: 41 sprite file(s), 1 sheet file(s), 11 collection(s) with files, 0 clip override(s) (0 from pack(s), 0 from root); 42 key(s) changed their file; 43.8 ms.
+[Info   :Stitchwork] [ReloadTiming] LoadCollection 'Knight': 43 ms; sheets decoded=0 (0 ms) cached=0; sprites drawn=4
+[Info   :Stitchwork] [SpriteLoader] Reload complete: 9 replacement(s) drawn across 5 atlas(es) (3270 sprite def(s) walked) — Knight=4, Tools Cln=2, Prompts Cln=1, Bone Beast Child Call Cln=1, Knight(Hollownest)=1 — 2 rotated — atlas VRAM 20 RT/1072 MB — kept 8 unchanged material atlas(es)</code></pre>
+<ul><li><code>Stitchwork is loaded!</code> 这一行写着版本号。如果没有这一行，说明 BepInEx 没有加载 Stitchwork。</li><li><code>[Health] 9 OK</code> 表示所有健康检查都通过了。没通过的检查会显示 <code>WARN</code>，下一行写着它的名字。</li><li><code>[PackManager]</code> 这一行告诉你，Stitchwork 在资源包架上找到了多少个资源包。</li><li><code>[SpriteLoader] Reload complete</code> 按图集列出 Stitchwork 画上去的替换图数量。</li><li>先看 <code>Warning</code> 和 <code>Error</code> 开头的行。</li></ul>
+<div class="treat" data-treat="doctor-trouble"><div class="tr-quote line"><div class="seat"><div class="stage" role="img" aria-label="医师雅纳碧悬在半空"><span class="tr-anim" data-anim="doctor_sing" data-pivot data-scale="0.69" style="left: 92px; bottom: 74px"></span></div></div>
+<div><div class="game" data-bg="--tr-board:backboard"><div class="box npc"><span class="back"></span><img class="fl top" data-frames="fleur_top_npc" alt="">
+<p>让我瞧瞧让我瞧瞧。嗯，当然不是丝咒，不是那灵丝病。但确实有怪东西钻进去了！</p>
+<span class="fbot"><img class="fl bot" data-frames="fleur_bot_npc" alt=""><img class="arrow" data-loop="arrow_npc" alt=""></span></div></div>
+<p class="credit">Belltown · DOCTOR_CURSE_OFFER</p></div></div>
+</div>
+<hr>
+<h2 id="known-limitations">已知限制</h2>
+<p>当前版本的已知限制——有变通办法的都写在下面，正常使用时应该不会受到影响。</p>
+<ul><li><strong>同名的图集页，整图文件。</strong>如果一个 T2D 图集有好几页尺寸相同，只用通俗名命名的整图文件（<code>Hornet.png</code>）就分不清它们。请在文件名里加上页码——参见<a href="B4-t2d-sprites.html#one-name-several-pages">一个名字，多个图集页</a>。单张精灵图的文件不受影响。</li><li><strong>启用大量资源包时，场景调色可能会短暂消失。</strong>可以复现的原因已经修复；但还有一种残留情况：启用了很多资源包的情况下，进入某些场景时，场景调色可能会暂时消失。重新进入这个场景——或者在资源包管理器里点击<strong>应用</strong>——就能恢复。</li><li><strong>增量垃圾回收（<code>AutoEnableIncrementalGC</code>）与“验证游戏文件的完整性”。</strong>Stitchwork 会（通过游戏的 <code>boot.config</code>）开启 Unity 的增量垃圾回收，让帧时间更稳定。如果你运行过 Steam 的<em>验证游戏文件的完整性</em>，<wbr><code>boot.config</code> 会被重置——Stitchwork 会检测到这一点，并在下次启动时重新应用这项设置（你会看到一条要求重启的提示）。不需要手动做任何事。</li><li><strong>只保留一份 <code>Stitchwork.dll</code>。</strong><code>BepInEx/plugins/</code> 下任何位置多出来的<em>第二份</em>拷贝——改过名的旧安装、一份备份、解压出来的发布文件夹——都会触发 BepInEx 的重复插件保护，让情况变得混乱。删掉多余的拷贝，只留一份。你自己的作品并不放在 DLL 旁边：它在工作区文件夹里，默认是 <code>&lt;Game folder&gt;/<wbr>Stitchwork/<wbr></code>，总览面板会显示这个位置。参见<a href="A4-how-stitchwork-works.html#your-working-files">Stitchwork 工作原理</a>。</li><li><strong>与 Patchwork 共存。</strong>装着 <code>Patchwork.dll</code> 时，Stitchwork 会保持停用：参见<a href="A1-getting-started.html#already-using-patchwork-or-customizer">入门指南</a>。</li></ul>
+<p>这里没有列出的问题，请查看当前版本的更新说明，或者最新版本给出的社区频道。</p>
+    <div class="prevnext"><a class="pn prev" href="pack-folder-structure.html"><span>&larr; 上一页</span><b><span class="page-name">资源包目录结构</span></b></a><span></span></div>
+  </article></main>
+  <nav class="toc" aria-label="本页内容"><div class="toc-h">本页内容</div><ul><li class="lvl2"><a href="#i-don-t-see-anything-happen-stitchwork-isn-t-running">“我没看到任何变化 —— Stitchwork 压根没在运行”</a></li><li class="lvl2"><a href="#black-screen-at-launch-the-game-never-reaches-the-menu">“启动后黑屏 —— 游戏一直进不了菜单”</a></li><li class="lvl2"><a href="#menus-press-left-right-by-themselves-and-confirm-acts-as-cancel">“菜单自己左右乱跳——确认键还变成了取消”</a></li><li class="lvl3"><a href="#another-mod-s-ui-eventsystem">某个模组的 UI EventSystem</a></li><li class="lvl3"><a href="#a-stitchwork-window-in-the-main-menu">在主菜单用过 Stitchwork 的窗口</a></li><li class="lvl2"><a href="#i-can-t-type-into-stitchwork-s-fields-while-unityexplorer-is-open">“开着 UnityExplorer 时，没法在 Stitchwork 的输入框里打字”</a></li><li class="lvl2"><a href="#conflicting-plugin-detected-customizer">“日志里出现 Conflicting plugin detected: 'Customizer'”</a></li><li class="lvl2"><a href="#i-dropped-a-sprite-png-in-but-nothing-changed">“我放进了一张精灵图 PNG，但什么都没变”</a></li><li class="lvl3"><a href="#check-the-file-path">检查文件路径</a></li><li class="lvl3"><a href="#did-the-file-watcher-pick-it-up">文件监视器发现它了吗？</a></li><li class="lvl3"><a href="#is-the-sprite-actually-visible-right-now">那一帧现在在屏幕上吗？</a></li><li class="lvl3"><a href="#does-a-short-effect-still-show-vanilla-art">短暂的特效还是原版美术？</a></li><li class="lvl2"><a href="#white-specks-around-the-edges-of-my-art">“我的美术边缘有白色斑点”</a></li><li class="lvl2"><a href="#the-game-stops-for-a-moment-when-a-pack-applies">“应用资源包时，游戏会停顿一下”</a></li><li class="lvl2"><a href="#some-text-is-invisible-garbled-after-a-pack-apply">“应用资源包后，有些文字消失了或变成了乱码”</a></li><li class="lvl2"><a href="#two-packs-target-the-same-thing-what-wins">“两个资源包改了同一个东西——谁会生效？”</a></li><li class="lvl2"><a href="#a-stitchwork-panel-is-stuck-somewhere-weird">“Stitchwork 的面板卡在了奇怪的位置”</a></li><li class="lvl2"><a href="#my-stitchwork-panels-vanished">“我的 Stitchwork 面板不见了”</a></li><li class="lvl2"><a href="#audio-replacement-plays-the-wrong-audio-cuts-off-restarts">“替换的音频播错了/被截断/从头重播”</a></li><li class="lvl2"><a href="#my-anchors-txt-file-stopped-doing-anything">“我的 anchors.txt 文件不起作用了”</a></li><li class="lvl2"><a href="#filing-a-useful-bug-report">提交有用的 Bug 报告</a></li><li class="lvl2"><a href="#known-limitations">已知限制</a></li></ul></nav>
+</div>
+
+
+<script>
+window.TREATS_BASE = "../assets/treats/";
+</script><script src="../assets/treats/art.js"></script><script src="../assets/treats/treats.js"></script>
+<script src="../assets/app.js"></script></body></html>
