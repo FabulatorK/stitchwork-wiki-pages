@@ -1,0 +1,277 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="stitchwork-version" content="0.9.0">
+<title>A1 · Getting Started &middot; Stitchwork Wiki</title><link rel="stylesheet" href="../assets/style.css"><link rel="stylesheet" href="../assets/demos.css"></head><body data-mod="foundations">
+<header class="topbar">
+  <div class="topbar-inner">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">&#9776;</button>
+  <a class="brand" href="index.html">Stitchwork <span>Wiki</span></a>
+  <span class="wiki-ver" title="For Stitchwork 0.9.0">0.9.0</span>
+  <div class="reading" id="reading" aria-hidden="true"><span class="reading-label" id="readingLabel"></span><span class="reading-track"><span class="reading-fill" id="readingFill"><svg class="reading-needle" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c-.667 -.667 3.262 -6.236 11.785 -16.709a3.5 3.5 0 1 1 5.078 4.791c-10.575 8.612 -16.196 12.585 -16.863 11.918"/><path d="M17.5 6.5l-1 1"/><path d="M17 7c-2.333 -2.667 -3.5 -4 -5 -4s-2 1 -2 2c0 4 8.161 8.406 6 11c-1.056 1.268 -3.363 1.285 -5.75 .808"/><path d="M5.739 15.425c-1.393 -.565 -3.739 -1.925 -3.739 -3.425"/><path d="M19.5 9.5l1.5 1.5"/></svg></span></span></div>
+  <div class="topbar-right">
+    <select class="lang-select" aria-label="Language" onchange="if(this.value)location.href=this.value"><option value="" selected>English</option><option value="../zh/A1-getting-started.html">中文 · ~100%</option></select>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"><span class="theme-ico" aria-hidden="true">&#9680;</span></button>
+  </div>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"><input class="search" id="search" type="search" placeholder="Filter pages…" aria-label="Filter pages…"><nav class="nav"><details class="nav-sec cur" data-mod="foundations" open><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12l0 9"/><path d="M12 12l-8 -4.5"/><path d="M16 5.25l-8 4.5"/></svg><span class="sec-name" title="Foundations">Foundations</span><span class="sec-n">7</span></summary><ul><li><a href="A0-about-stitchwork.html"><span class="page-code">A0</span> <span class="page-name">About Stitchwork</span></a></li><li class="active"><a href="A1-getting-started.html"><span class="page-code">A1</span> <span class="page-name">Getting Started</span></a></li><li><a href="A2-installing-packs.html"><span class="page-code">A2</span> <span class="page-name">Installing Packs</span></a></li><li><a href="A3-pack-manager.html"><span class="page-code">A3</span> <span class="page-name">The Pack Manager</span></a></li><li><a href="A4-how-stitchwork-works.html"><span class="page-code">A4</span> <span class="page-name">How Stitchwork Works</span></a></li><li><a href="A5-when-something-looks-wrong.html"><span class="page-code">A5</span> <span class="page-name">When Something Looks Wrong</span></a></li><li class="extra"><a href="AEx1-conditional-activation.html"><span class="page-code">AEx1</span> <span class="page-name">Conditional Activation<span class="ex-tag">extra</span></span></a></li></ul></details><details class="nav-sec" data-mod="graphics"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8h.01"/><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z"/><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5"/><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3"/></svg><span class="sec-name" title="Graphics">Graphics</span><span class="sec-n">11</span></summary><ul><li><a href="B0-choosing-a-workflow.html"><span class="page-code">B0</span> <span class="page-name">Choosing a Workflow</span></a></li><li><a href="B1-starting-a-skin-pack.html"><span class="page-code">B1</span> <span class="page-name">Starting a Skin Pack</span></a></li><li><a href="B2-finding-any-sprite.html"><span class="page-code">B2</span> <span class="page-name">Finding Any Sprite</span></a></li><li><a href="B3-spritesheets.html"><span class="page-code">B3</span> <span class="page-name">Porting Prior Work — Spritesheets &amp; CKC</span></a></li><li><a href="B4-t2d-sprites.html"><span class="page-code">B4</span> <span class="page-name">Texture2D (T2D) Sprites</span></a></li><li><a href="B5-anchors.html"><span class="page-code">B5</span> <span class="page-name">Bigger Art — Anchors</span></a></li><li><a href="B6-animation-canvas.html"><span class="page-code">B6</span> <span class="page-name">Animation Canvas Workflow</span></a></li><li><a href="B7-sprite-paths.html"><span class="page-code">B7</span> <span class="page-name">Sprite Paths Reference</span></a></li><li><a href="B8-animation-controller.html"><span class="page-code">B8</span> <span class="page-name">The Animation Mode</span></a></li><li><a href="B9-colors.html"><span class="page-code">B9</span> <span class="page-name">Colors</span></a></li><li class="extra"><a href="BEx1-reused-frames.html"><span class="page-code">BEx1</span> <span class="page-name">Reused Frames and Appliqué<span class="ex-tag">extra</span></span></a></li></ul></details><details class="nav-sec" data-mod="text"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9h8"/><path d="M8 13h6"/><path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3z"/></svg><span class="sec-name" title="Text">Text</span><span class="sec-n">2</span></summary><ul><li><a href="C1-text.html"><span class="page-code">C1</span> <span class="page-name">Text &amp; Dialogue</span></a></li><li><a href="C2-fonts.html"><span class="page-code">C2</span> <span class="page-name">Fonts — Missing Characters and Replacement</span></a></li></ul></details><details class="nav-sec" data-mod="audio"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8a5 5 0 0 1 0 8"/><path d="M17.7 5a9 9 0 0 1 0 14"/><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"/></svg><span class="sec-name" title="Audio">Audio</span><span class="sec-n">1</span></summary><ul><li><a href="D1-audio.html"><span class="page-code">D1</span> <span class="page-name">Audio</span></a></li></ul></details><details class="nav-sec" data-mod="video"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M8 4l0 16"/><path d="M16 4l0 16"/><path d="M4 8l4 0"/><path d="M4 16l4 0"/><path d="M4 12l16 0"/><path d="M16 8l4 0"/><path d="M16 16l4 0"/></svg><span class="sec-name" title="Video">Video</span><span class="sec-n">1</span></summary><ul><li><a href="E1-video.html"><span class="page-code">E1</span> <span class="page-name">Video</span></a></li></ul></details><details class="nav-sec" data-mod="ship"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21l-8 -4.5v-9l8 -4.5l8 4.5v4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12v9"/><path d="M12 12l-8 -4.5"/><path d="M15 18h7"/><path d="M19 15l3 3l-3 3"/></svg><span class="sec-name" title="Ship">Ship</span><span class="sec-n">2</span></summary><ul><li><a href="Ship-priority-and-conflicts.html"><span class="page-name">Priority &amp; Conflicts</span></a></li><li><a href="distributing-your-pack.html"><span class="page-name">Distributing Your Pack</span></a></li></ul></details><details class="nav-sec" data-mod="reference"><summary><i class="lamp" aria-hidden="true"></i><svg class="mi" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"/><path d="M19 16h-12a2 2 0 0 0 -2 2"/><path d="M9 8h6"/></svg><span class="sec-name" title="Reference">Reference</span><span class="sec-n">8</span></summary><ul><li><a href="dumping.html"><span class="page-name">Dumping &amp; Full Dump</span></a></li><li><a href="companion-mods.html"><span class="page-name">Companion Mods</span></a></li><li><a href="code-mod-api.html"><span class="page-name">The API for Code Mods</span></a></li><li><a href="hotkeys.html"><span class="page-name">Hotkeys</span></a></li><li><a href="pack-folder-structure.html"><span class="page-name">Pack Folder Structure</span></a></li><li><a href="testing-with-savestates.html"><span class="page-name">Testing With Savestates (DebugMod)</span></a></li><li><a href="troubleshooting.html"><span class="page-name">Troubleshooting</span></a></li><li><a href="glossary-zh.html"><span class="page-name">术语表（简体中文）</span></a></li></ul></details></nav></aside>
+  <main class="content"><article>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>&rsaquo;</span> <a class="crumb-mod" href="index.html#A"><svg class="mi" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5"/><path d="M12 12l8 -4.5"/><path d="M12 12l0 9"/><path d="M12 12l-8 -4.5"/><path d="M16 5.25l-8 4.5"/></svg>Foundations</a> <span>&rsaquo;</span> <span aria-current="page">A1 · Getting Started</span></nav>
+    <header class="page-head"><h1><span class="page-code">A1</span> <span class="page-name">Getting Started</span></h1><div class="page-tags"><span class="tag lvl-intro">intro</span><span class="tag aud-player">player</span><span class="tag aud-creator">creator</span><span class="read-time" title="Estimated reading time"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>4 min read</span></div><div class="page-dates">For Stitchwork 0.9.0 &middot; Last edited: 2026-10-19</div></header>
+    <blockquote class="note"><p><strong>Foundations · start here.</strong><br>Install Stitchwork once, then follow the route that fits what you want to do.</p></blockquote>
+<h2 id="do-you-want-to-use-skins-or-make-skins">Do you want to use skins or make skins?</h2>
+<div class="route-pick"><section class="route-col" data-mod="foundations"><h3 id="i-just-want-to-use-skins">I just want to use skins</h3>
+<p>Take the short route: <a href="A1-getting-started.html#installing">A1 · install Stitchwork</a>, then <a href="A2-installing-packs.html">A2 · install and enable a pack</a>.<br>Once your skin works, <strong>you're done — go play.</strong><br>Already have Stitchwork? Start at <a href="A2-installing-packs.html">A2</a>.</p>
+<p><a href="A3-pack-manager.html">A3 · The Pack Manager</a> is there when you want to reorder packs or save profiles.<br>You can skip the rest, which are guides for creators.</p></section><section class="route-col" data-mod="graphics"><h3 id="i-want-to-make-skins-i-am-a-creator">I want to make skins (I am a creator)</h3>
+<p><strong>This route takes more reading and hands-on practice.</strong><br>You will learn how the game names assets, where replacements belong, and how to test them. You do not need programming knowledge or the Unity Editor, but expect to work through a first edit before tackling a whole skin.</p>
+<p><a href="A1-getting-started.html#installing">Install Stitchwork in A1</a>, then read <a href="A4-how-stitchwork-works.html">A4 · How Stitchwork Works</a>.<br>From there, choose the graphics, text, audio, or video section to get started. Read the guides your project needs; you do not need to read this wiki cover to cover (unless you want to replace every asset type using all the methods available).</p></section></div>
+<h2 id="what-stitchwork-is">What Stitchwork is</h2>
+<p>Stitchwork replaces Silksong's art, text, sound, and video with files from <strong>packs</strong>. It leaves the game's asset files alone. You can enable several packs and choose which wins when they overlap.</p>
+<p>Curious about its origins?<br><a href="A0-about-stitchwork.html">A0 · About Stitchwork</a> covers the background story.</p>
+<h2 id="requirements">Requirements</h2>
+<ul><li>Hollow Knight: Silksong on PC (Windows, macOS, or Linux; Steam or GOG).</li><li><strong>BepInEx 5</strong>, the mod framework. If you already use mods or a mod installer, you likely have it; otherwise see the setup link in <a href="troubleshooting.html">Troubleshooting</a>.</li><li>Enough free disk space for your packs; a large skin can take a few hundred MB or more.</li></ul>
+<h2 id="installing">Installing</h2>
+<p><strong>With a mod manager:</strong> install Stitchwork from Thunderstore with Cogfly, Gale, or r2modman, then launch through that manager. Skip the manual steps below.</p>
+<details>
+<summary>Installing manually, or updating a manual install</summary>
+<ol><li>Download the release. Extract all its files into one folder under <code>BepInEx/plugins/</code>, as shown below.</li><li><strong>Keep one copy of Stitchwork.</strong> When updating, replace the old files rather than leave a second DLL elsewhere.</li><li>Launch the game.</li></ol>
+<pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>…/BepInEx/plugins/StitchworkRoot/Stitchwork.dll
+…/BepInEx/plugins/StitchworkRoot/stitchwork.assetbundle
+…/BepInEx/plugins/StitchworkRoot/Lang/
+…/BepInEx/plugins/StitchworkRoot/LICENSE
+…/BepInEx/plugins/StitchworkRoot/LICENSES/</code></pre>
+<p><code>StitchworkRoot</code> is a suggested folder name, chosen to distinguish the plugin from a pack's <code>Stitchwork/</code> subfolder. Mod managers use their own names; those are fine.</p>
+<figure class="demo" data-demo="a1-install-folder"><div class="swx" data-dm-root data-mode="manual" data-view="folder" data-stage="0" data-open="install.manual">
+<div class="swx-mount"></div>
+<div class="swx-strings" hidden>
+<span data-d="install-explorer:ui.title:t">Files</span>
+<span data-d="install-explorer:ui.mode.manual:t">Manual install</span>
+<span data-d="install-explorer:ui.mode.cogfly:t">Cogfly profile</span>
+<span data-d="install-explorer:ui.cust:t">Customizer skins</span>
+<span data-d="install-explorer:ui.stage.0:t">Just installed</span>
+<span data-d="install-explorer:ui.stage.0:what"><strong>Just installed:</strong> only the files you copied in. Move along the thread to see what Stitchwork adds.</span>
+<span data-d="install-explorer:ui.stage.1:t">First launch</span>
+<span data-d="install-explorer:ui.stage.1:what"><strong>First launch:</strong> Stitchwork sets up your working folder, the Packs shelf and its settings.</span>
+<span data-d="install-explorer:ui.stage.2:t">Using features</span>
+<span data-d="install-explorer:ui.stage.2:what"><strong>Using features:</strong> more folders appear when you use the tools that need them.</span>
+<span data-d="install-explorer:ui.count:t">Stitchwork has added {n} items</span>
+<span data-d="install-explorer:ui.count0:t">Nothing added yet</span>
+<span data-d="install-explorer:ui.hint:t">Pick a folder or a file to see what it does. The patched folders are Stitchwork’s own.</span>
+<span data-d="install-explorer:ui.see:t">See:</span>
+<span data-d="install-explorer:ui.leg.sw:t">Stitchwork adds it</span>
+<span data-d="install-explorer:ui.leg.ships:t">Ships with Stitchwork</span>
+<span data-d="install-explorer:ui.leg.other:t">The game, BepInEx or your mod manager</span>
+<span data-d="install-explorer:ui.leg.cust:t">Customizer</span>
+<span data-d="install-explorer:ui.found:t">Found</span>
+<span data-d="install-explorer:ui.lost:t">Not found</span>
+<span data-d="install-explorer:chip.sw1:t">Stitchwork adds this on the first launch</span>
+<span data-d="install-explorer:chip.sw2:t">Stitchwork adds this when you use it</span>
+<span data-d="install-explorer:chip.ships:t">Ships with Stitchwork</span>
+<span data-d="install-explorer:chip.mgr:t">Your mod manager owns this</span>
+<span data-d="install-explorer:chip.game:t">The game’s own</span>
+<span data-d="install-explorer:chip.loader:t">BepInEx</span>
+<span data-d="install-explorer:chip.user:t">You install these</span>
+<span data-d="install-explorer:chip.cust:t">Customizer · read in place, never changed</span>
+<span data-d="install-explorer:chip.shared:t">Shared by every profile</span>
+<span data-d="install-explorer:chip.profile:t">This profile only</span>
+<span data-d="install-explorer:chip.edit:t">Stitchwork adds one line</span>
+<span data-d="install-explorer:who.game:t">game</span>
+<span data-d="install-explorer:who.loader:t">BepInEx</span>
+<span data-d="install-explorer:who.mgr:t">Cogfly</span>
+<span data-d="install-explorer:who.ships:t">ships</span>
+<span data-d="install-explorer:who.sw:t">Stitchwork</span>
+<span data-d="install-explorer:who.user:t">yours</span>
+<span data-d="install-explorer:who.cust:t">Customizer</span>
+<span data-d="install-explorer:who.shared:t">shared</span>
+<span data-d="install-explorer:who.profile:t">this profile</span>
+<span data-d="install-explorer:who.found:t">found</span>
+<span data-d="install-explorer:who.lost:t">not found</span>
+<span data-d="install-explorer:game:what">Your game folder, where Steam or your store installed Silksong. Stitchwork keeps its own folders here, beside the game, where mod-manager updates never reach.</span>
+<span data-d="install-explorer:profile:what">One Cogfly profile. BepInEx and every mod that you add live here, so each profile is its own modded copy of the game.</span>
+<span data-d="install-explorer:bep:what">The mod loader. Stitchwork runs as a BepInEx plugin.</span>
+<span data-d="install-explorer:bep.plugins:what">Where plugins go. Stitchwork also looks here for packs: any folder with a Stitchwork/ (or Patchwork/) folder inside.</span>
+<span data-d="install-explorer:bep.config:what">The settings of every plugin.</span>
+<span data-d="install-explorer:install.manual:what">The folder that you copied Stitchwork into. Keep these files together, and keep your own work out of it. The name is only a suggestion: Stitchwork finds itself wherever the DLL is. Older versions kept your files here; Dashboard › Migrate now copies them to the working folder.</span>
+<span data-d="install-explorer:install.manual:see"><a href="A1-getting-started.html">A1 · Getting Started</a></span>
+<span data-d="install-explorer:install.mgr:what">Where Cogfly installed Stitchwork from Thunderstore. Cogfly replaces this folder at every update, so Stitchwork keeps nothing of yours in it.</span>
+<span data-d="install-explorer:mgr.manifest:what">Thunderstore’s package card: the name, the version and the dependencies.</span>
+<span data-d="install-explorer:mgr.icon:what">The package icon on Thunderstore.</span>
+<span data-d="install-explorer:mgr.readme:what">The package description on Thunderstore.</span>
+<span data-d="install-explorer:mgr.changes:what">What changed in each version.</span>
+<span data-d="install-explorer:ship.dll:what">Stitchwork itself.</span>
+<span data-d="install-explorer:ship.bundle:what">The shaders that Stitchwork needs. Always install it with the DLL from the same release.</span>
+<span data-d="install-explorer:ship.lang:what">Stitchwork’s own interface languages: the mod’s menus and buttons, not your pack’s text.</span>
+<span data-d="install-explorer:ship.license:what">The licence. LICENSES/ beside it holds the third-party notices.</span>
+<span data-d="install-explorer:ship.licenses:what">The licences of the parts that Stitchwork uses, such as the Tabler icons.</span>
+<span data-d="install-explorer:cfg:what">Stitchwork’s settings file. Settings (key 0) writes it for you.</span>
+<span data-d="install-explorer:cfg:see"><a href="hotkeys.html">Hotkeys & Settings</a></span>
+<span data-d="install-explorer:state:what">Your pack setup: the order of your packs, which are on, their conditions, and saved profiles. It lives in BepInEx’s config, so each mod-manager profile keeps its own setup.</span>
+<span data-d="install-explorer:state:see"><a href="A3-pack-manager.html">A3 · The Pack Manager</a></span>
+<span data-d="install-explorer:state.stats:what">A small cache of each pack’s file counts, so the Pack Manager opens fast. It rebuilds itself.</span>
+<span data-d="install-explorer:state.packs:what">Your pack order and on/off switches, top first.</span>
+<span data-d="install-explorer:state.packs:when">Appears when you press Apply in the Pack Manager.</span>
+<span data-d="install-explorer:state.cond:what">The conditions that you set on packs: the scene, the crest, another pack, and so on.</span>
+<span data-d="install-explorer:state.cond:when">Appears when you press Apply in the Pack Manager.</span>
+<span data-d="install-explorer:state.profiles:what">Pack setups that you saved by name, to switch between in one click.</span>
+<span data-d="install-explorer:state.profiles:when">Appears when you save a pack profile.</span>
+<span data-d="install-explorer:data:what">The game’s data folder.</span>
+<span data-d="install-explorer:data.boot:what">Unity’s start-up settings. Stitchwork adds one line that turns on the incremental garbage collector, for smoother frames. Set AutoEnableIncrementalGC = false and launch once, and the line goes.</span>
+<span data-d="install-explorer:data.bootbak:what">A copy of boot.config from before Stitchwork changed it.</span>
+<span data-d="install-explorer:data.mods:what">Where Silksong Customizer keeps its skins.</span>
+<span data-d="install-explorer:data.cust:what">Customizer’s skins folder. Stitchwork shows each skin as a pack and reads it in place; it never changes these folders.</span>
+<span data-d="install-explorer:data.cust:see"><a href="A2-installing-packs.html">A2 · Installing Packs</a></span>
+<span data-d="install-explorer:data.cust.skin:what">One Customizer skin. In the Pack Manager it shows beside your Stitchwork packs, and Convert can turn it into a Stitchwork pack.</span>
+<span data-d="install-explorer:data.cust.active:what">Customizer’s marker for the active skin. Stitchwork also uses it to recognise a skin.</span>
+<span data-d="install-explorer:data.cust.coll:what">Whole sprite sheets, one folder for each sprite collection, at the skin’s root.</span>
+<span data-d="install-explorer:data.cust.t2d:what">Texture2D sheets: the HUD, menus and effects.</span>
+<span data-d="install-explorer:mgr.custskin:what">A Customizer skin that your mod manager installed. Stitchwork recognises it by its active.txt and shows it as a pack.</span>
+<span data-d="install-explorer:packs:what">The shelf for the packs that you install by hand. Every profile and every launch method sees it, and mod-manager updates leave it alone.</span>
+<span data-d="install-explorer:packs:see"><a href="A2-installing-packs.html">A2 · Installing Packs</a></span>
+<span data-d="install-explorer:packs.user:what">A pack that you installed. Only the name of its Stitchwork/ folder must be exact.</span>
+<span data-d="install-explorer:packs.user:see"><a href="pack-folder-structure.html">Pack Folder Structure</a></span>
+<span data-d="install-explorer:packs.user.sw:what">The folder that Stitchwork looks for inside every pack.</span>
+<span data-d="install-explorer:pk.json:what">Optional, but ship it — the name, author, version and description on your pack’s card, and its cover. Stitchwork reads THIS, not manifest.json; without it, the folder name is used, and players lose their settings when a new version ships in a new folder.</span>
+<span data-d="install-explorer:pk.json:see"><a href="distributing-your-pack.html">Distributing Your Pack</a></span>
+<span data-d="install-explorer:pk.sprites:what">Individual sprites — one PNG per frame.</span>
+<span data-d="install-explorer:pk.sprites:see"><a href="B7-sprite-paths.html">B7 · Sprite Paths Reference</a></span>
+<span data-d="install-explorer:pk.sounds:what">Audio replacements, matched by the vanilla clip name.</span>
+<span data-d="install-explorer:pk.sounds:see"><a href="D1-audio.html">D1 · Audio</a></span>
+<span data-d="install-explorer:pk.text:what">Localized text, by sheet then language.</span>
+<span data-d="install-explorer:pk.text:see"><a href="C1-text.html">C1 · Text & Dialogue</a></span>
+<span data-d="install-explorer:lost:what">Stitchwork does not find this pack. It looks for a Stitchwork/ folder inside each pack, and these files sit one level too high. Make a Stitchwork/ folder in CrystalHornet/ and move them into it.</span>
+<span data-d="install-explorer:packs.convert:what">A Customizer skin converted into a Stitchwork pack. It starts switched off, so you choose when it takes over.</span>
+<span data-d="install-explorer:packs.convert:when">Appears when you press Convert on a Customizer skin.</span>
+<span data-d="install-explorer:mgr.pack:what">A pack that your mod manager installed. It belongs to this profile, and its updates replace it.</span>
+<span data-d="install-explorer:work:what">Your working folder. Files here load straight away, with no pack, so this is where you make and test things. Your edits, dumps and exports land here. Every active pack ranks above it, except for text and color rules, where yours win.</span>
+<span data-d="install-explorer:work:see"><a href="B1-starting-a-skin-pack.html">B1 · Starting a Skin Pack</a></span>
+<span data-d="install-explorer:work.sprites:what">Your sprites, in the same layout that a pack uses. Edit and Compile write here.</span>
+<span data-d="install-explorer:work.sprites:see"><a href="B7-sprite-paths.html">B7 · Sprite Paths</a></span>
+<span data-d="install-explorer:work.sprites.t2d:what">Sprites of the Texture2D system: the HUD, menus, effects and more.</span>
+<span data-d="install-explorer:work.sprites.t2d:see"><a href="B4-t2d-sprites.html">B4 · T2D Sprites</a></span>
+<span data-d="install-explorer:work.sprites.coll:what">One sprite collection, named as the game names it. Hornet’s is Knight.</span>
+<span data-d="install-explorer:work.sprites.coll:when">Appears when you edit a sprite.</span>
+<span data-d="install-explorer:work.sprites.clips:what">Appliqué: art for one clip only, even when other clips share the sprite.</span>
+<span data-d="install-explorer:work.sprites.clips:when">Appears when you give a clip its own art.</span>
+<span data-d="install-explorer:work.sprites.clips:see"><a href="BEx1-reused-frames.html">BEx1 · Reused Frames and Appliqué</a></span>
+<span data-d="install-explorer:work.sprites.wip:what">An animation laid out on one canvas, ready to paint. Stitchwork never loads it; Compile writes your frames back.</span>
+<span data-d="install-explorer:work.sprites.wip:when">Appears when you open a clip on the canvas.</span>
+<span data-d="install-explorer:work.sprites.wip:see"><a href="B6-animation-canvas.html">B6 · Animation Canvas</a></span>
+<span data-d="install-explorer:work.sheets:what">Whole sprite sheets, for art that you have as one big image.</span>
+<span data-d="install-explorer:work.sheets:see"><a href="B3-spritesheets.html">B3 · Porting Prior Work</a></span>
+<span data-d="install-explorer:work.sounds:what">Sound replacements, matched by the game’s clip names.</span>
+<span data-d="install-explorer:work.sounds:see"><a href="D1-audio.html">D1 · Audio</a></span>
+<span data-d="install-explorer:work.videos:what">Cutscene replacements.</span>
+<span data-d="install-explorer:work.videos:see"><a href="E1-video.html">E1 · Video</a></span>
+<span data-d="install-explorer:work.text:what">Your text changes. The Dialogue Editor saves here, and text here wins over every pack.</span>
+<span data-d="install-explorer:work.text:see"><a href="C1-text.html">C1 · Text & Dialogue</a></span>
+<span data-d="install-explorer:work.fonts:what">Fonts: one folder for each language slot, and _fallback/ for the characters that the game’s fonts lack.</span>
+<span data-d="install-explorer:work.fonts:see"><a href="C2-fonts.html">C2 · Fonts</a></span>
+<span data-d="install-explorer:work.recolor:what">Your color rules. The Colors mode writes them for you, so you do not have to edit them by hand.</span>
+<span data-d="install-explorer:work.recolor:see"><a href="B9-colors.html">B9 · Colors</a></span>
+<span data-d="install-explorer:work.dumps:what">The game’s own art, text and sounds, exported for you to work from. Keep it as reference; never ship it.</span>
+<span data-d="install-explorer:work.dumps:see"><a href="dumping.html">Dumping & Full Dump</a></span>
+<span data-d="install-explorer:work.dumps.sprites:what">Vanilla sprites, in the same layout as your Sprites/ folder.</span>
+<span data-d="install-explorer:work.dumps.sheets:what">Vanilla sprite sheets.</span>
+<span data-d="install-explorer:work.dumps.text:what">The game’s text, for each sheet and language.</span>
+<span data-d="install-explorer:work.dumps.sounds:what">The sounds that you saved from the game.</span>
+<span data-d="install-explorer:work.dumps.sounds:when">Appears when you press Dump WAV in the Audio tab.</span>
+<span data-d="install-explorer:work.lang:what">Your translation of Stitchwork’s own interface, laid over the languages that ship with it.</span>
+<span data-d="install-explorer:work.lang:when">Appears when you translate the interface in Text › Translate.</span>
+<span data-d="install-explorer:work.converted:what">Sprite sheets split into single sprites.</span>
+<span data-d="install-explorer:work.converted:when">Appears when you convert a sheet in the Utilities tab.</span>
+<span data-d="install-explorer:work.showcase:what">Animated GIFs of your clips.</span>
+<span data-d="install-explorer:work.showcase:when">Appears when you press Export GIF.</span>
+<span data-d="install-explorer:work.backups:what">The originals that Stitchwork kept before it changed files for you, for example with Clean edges. Delete them when you are happy with the result.</span>
+<span data-d="install-explorer:work.backups:when">Appears when you clean a pack’s edges.</span>
+<span data-d="install-explorer:work.doctor:what">The Pack Doctor’s reports, one for each pack.</span>
+<span data-d="install-explorer:work.doctor:when">Appears when you run the Pack Doctor.</span>
+<span data-d="install-explorer:work.diagnostics:what">Performance captures from Utilities › Probes: Capture heap and Arm GC stall capture save their reports here. Attach one to a bug report about stutter.</span>
+<span data-d="install-explorer:work.diagnostics:when">Appears when you start a capture in Utilities › Probes.</span>
+<span data-d="install-explorer:work.audiocat:what">Every sound name that the game has played so far, so the Audio tab can list them. Every profile shares it.</span>
+<span data-d="install-explorer:work.audiocat:when">Appears after you play for a while.</span>
+</div>
+</div>
+<figcaption>BepInEx/plugins/StitchworkRoot/ with the DLL, assetbundle, Lang/ and the license files inside</figcaption></figure>
+</details>
+<h2 id="already-using-patchwork-or-customizer">Mods to remove first</h2>
+<p>These mods replace the same art, sounds or fonts as Stitchwork. Don't run them beside it: remove them from <code>BepInEx/plugins/</code>. Stitchwork does their job.</p>
+<ul><li><strong>Patchwork.</strong> Stitchwork is a fork of Patchwork, and the two <strong>can't run together</strong> (they fight over sprite loading). If <code>Patchwork.dll</code> is present, Stitchwork goes inert with a main-menu notice. Remove <code>Patchwork.dll</code> to use Stitchwork.</li><li><strong>Customizer and its variants:</strong> Silksong Customizer, MultiCustomizer, CustomizerT2D and CustomizerCinematic. They write the same textures, and the mods collide. Stitchwork loads Customizer skins itself (<a href="A2-installing-packs.html">Installing Packs</a>), and video skins made for CustomizerCinematic play their cutscenes in Stitchwork too. While a Customizer plugin is installed, Stitchwork leaves the skins in Customizer's own folder alone.</li><li><strong>Font mods:</strong> SilksongFontsInject and CustomFontSilksong. They write the same font slots as Stitchwork's <a href="C2-fonts.html">font replacement</a>, so the last mod to write a font wins. Stitchwork's log warns about them.</li><li><strong>Audio mods:</strong> CustomAudio, HornetAudioEditor, CustomNeedolin and CustomMusicRandomizer. They replace sounds and music that Stitchwork's <a href="D1-audio.html">audio replacement</a> also replaces.</li></ul>
+<p>From the <strong>Architect-Silksong</strong> editor?<br>Architect runs fine beside Stitchwork. While Architect's edit mode is on, Stitchwork steps aside: its panels close, and its keys open nothing until you leave edit mode.</p>
+<h2 id="first-launch">First launch</h2>
+<p>Look for the <strong>status badge</strong> in the bottom-left corner. Seeing it means Stitchwork is running; click it to open <strong>Packs</strong>. You can also press <code>1</code>, or move the mouse to the top edge and click the <strong>Packs</strong> tab.</p>
+<p><strong>First launch asks for one restart.</strong> Stitchwork enables incremental GC for smoother performance. It adds one line to the game's <code>boot.config</code> and backs up the original. To undo that setting, set <code>AutoEnableIncrementalGC = false</code> in the config. At the next launch, Stitchwork removes the line, and a notice asks for one more restart to finish.</p>
+<p><strong>The Dashboard tab blinks on the first launch:</strong> three decisions wait, and two of them matter before your first edit. Press <code>2</code> and click each row in the <strong>Overview</strong> panel.</p>
+<ul><li><strong>Working folder</strong> is where your edits and dumps go: <strong>Keep game root (recommended)</strong> uses <code>&lt;Game folder&gt;/<wbr>Stitchwork/<wbr></code>, which mod-manager updates never touch.</li><li><strong>Image editor</strong> is the program that every <strong>Edit</strong> button opens: <strong>Keep system default</strong> uses your system's app for PNG files, and <strong>Browse…</strong> selects another program.</li><li><strong>Target pack</strong> can wait: click <strong>Not now</strong> until you make your first pack in <a href="B1-starting-a-skin-pack.html">B1 · Starting a Skin Pack</a>.</li></ul>
+<p>If you only use skins, keep the defaults of the first two rows.</p>
+<figure class="demo" data-demo="overview-choices"><div class="dm-root" data-dm-root>
+<div class="dm-says" aria-live="polite">
+<div class="dm-say on" data-say="intro" data-d="overview-choices:intro">On a first launch, the Dashboard tab blinks: three decisions wait. Click the tab to open the Overview. Each row needs one decision, and keeping the default counts as one.</div>
+<div class="dm-say" data-say="browse-folder" data-d="overview-choices:browse-folder">In the game, Browse… opens your system's folder picker. The folder you pick becomes your working folder at the next launch.</div>
+<div class="dm-say" data-say="open-folder" data-d="overview-choices:open-folder">In the game, this button opens your working folder in your file manager.</div>
+<div class="dm-say" data-say="set-editor" data-d="overview-choices:set-editor">In the game, Set checks that the program exists before it saves the path. This page cannot look at your disk, so here it only explains.</div>
+<div class="dm-say" data-say="browse-editor" data-d="overview-choices:browse-editor">In the game, Browse… opens a file picker, where you select the program of your image editor.</div>
+<div class="dm-say" data-say="push" data-d="overview-choices:push">In the game, Push copies your working files into the target pack. It overwrites the files with the same name and never deletes a file.</div>
+<div class="dm-say" data-say="pull-merge" data-d="overview-choices:pull-merge">In the game, Pull (merge) copies the pack's files into your working folder, over the files that are already there.</div>
+<div class="dm-say" data-say="pull-replace" data-d="overview-choices:pull-replace">In the game, the second click empties your working folder, then copies the pack's files in. Your canvas workspaces (the folders whose name ends in _WIP) stay.</div>
+<div class="dm-say" data-say="settled" data-d="overview-choices:settled">Nothing waits now, so the Dashboard tab stops blinking. You can change each choice later in the same panel.</div>
+</div>
+<div class="dm-mount"></div>
+<div class="dm-chrome"><button type="button" class="dm-reset" data-act="reset" data-d="overview-choices:reset">Start over</button></div>
+<div class="dm-strings" hidden>
+<span data-k="tab" data-t>Dashboard</span>
+<span data-k="one" data-t>A decision waits</span>
+<span data-k="many" data-t>{0} decisions wait</span>
+<span data-k="panel" data-t>Overview</span>
+<span data-k="wf" data-t>Working folder</span>
+<span data-k="wf-open" data-t>Confirm where your files live</span>
+<span data-k="wf-root" data-t>Game root</span>
+<span data-k="wf-custom" data-t>Custom folder</span>
+<span data-k="wf-about" data-t>Your Sprites, Sounds and Text are read from here, and Dumps are written here. The game root sits beside the game install, where mod-manager updates never reach.</span>
+<span data-k="keep-root" data-t>Keep game root (recommended)</span>
+<span data-k="use-root" data-t>Use game root (recommended)</span>
+<span data-k="wf-field" data-t>Custom folder path</span>
+<span data-k="set" data-t>Set</span>
+<span data-k="browse" data-t>Browse…</span>
+<span data-k="open-folder" data-t>Open folder</span>
+<span data-k="restart" data-t>Takes effect on the next game launch.</span>
+<span data-k="ed" data-t>Image editor</span>
+<span data-k="ed-open" data-t>Pick the program Edit opens</span>
+<span data-k="ed-default" data-t>System default</span>
+<span data-k="ed-tip" data-t>Opens PNGs with the app your system uses for .png</span>
+<span data-k="ed-about" data-t>Every Edit button opens its PNG in this program. Saving there reloads it in game.</span>
+<span data-k="ed-field" data-t>Program path (.exe)</span>
+<span data-k="keep-default" data-t>Keep system default</span>
+<span data-k="use-default" data-t>Use system default</span>
+<span data-k="target" data-t>Target pack</span>
+<span data-k="t-wait" data-t>No target pack — pick one to enable Push/Pull</span>
+<span data-k="t-off" data-t>No target pack · Push and Pull stay off</span>
+<span data-k="not-now" data-t>Not now</span>
+<span data-k="t-why" data-t>Push and Pull stay off until you pick a pack.</span>
+<span data-k="t-label" data-t>Target pack:</span>
+<span data-k="clear" data-t>Clear target pack</span>
+<span data-k="push" data-t>Push</span>
+<span data-k="pull-merge" data-t>Pull (merge)</span>
+<span data-k="pull-replace" data-t>Pull (replace)</span>
+<span data-k="replace-tip" data-t>Overwrites the working folder with the pack's files</span>
+<span data-k="arm" data-t>Click to replace</span>
+</div>
+</div>
+<figcaption>Try it here: the Overview's three first-launch choices, as they look in the game. A button that would touch your disk tells you what it does instead.</figcaption></figure>
+<h2 id="choose-your-next-page">Choose your next page</h2>
+<ul><li><strong>Use a skin:</strong> continue to <a href="A2-installing-packs.html">A2 · Installing Packs</a>. That page ends with your pack enabled and ready to play.</li><li><strong>Make a skin:</strong> continue to <a href="A4-how-stitchwork-works.html">A4 · How Stitchwork Works</a>, then choose what to change.</li><li><strong>No status badge or another problem:</strong> use <a href="A5-when-something-looks-wrong.html">A5 · When Something Looks Wrong</a>.</li></ul>
+<h2 id="opening-the-tools">Opening the tools</h2>
+<p>You only need <strong>Packs</strong> to use skins. The tabs from <strong>Dashboard</strong> to <strong>Utilities</strong> are the creator tools. To close a tool, click its tab again or press its key again. The <a href="hotkeys.html#pull-tabs-and-panels">controls reference</a> explains moving panels, rolling them out of the way, and key conflicts.</p>
+<h2 id="settings">Settings</h2>
+<p>Press <code>0</code>, or click the gear tab. <strong>Settings</strong> › <strong>General</strong> › <strong>Creator tabs</strong> hides the creator tabs if you only use packs. For language, folders, rendering, or config-file details, see the <a href="hotkeys.html#settings">Settings reference</a>.</p>
+<details>
+<summary>Platform notes</summary>
+<ul><li><strong>Windows, macOS and Linux:</strong> all three run Stitchwork natively — folder buttons, Browse dialogs and all. On Linux, the Browse dialogs need zenity or kdialog. Without one, paste the path into the field instead.</li></ul>
+</details>
+    <div class="prevnext"><a class="pn prev" href="A0-about-stitchwork.html"><span>&larr; Previous</span><b><span class="page-code">A0</span> <span class="page-name">About Stitchwork</span></b></a><a class="pn next" href="A2-installing-packs.html"><span>Next &rarr;</span><b><span class="page-code">A2</span> <span class="page-name">Installing Packs</span></b></a></div>
+  </article></main>
+  <nav class="toc" aria-label="On this page"><div class="toc-h">On this page</div><ul><li class="lvl2"><a href="#do-you-want-to-use-skins-or-make-skins">Do you want to use skins or make skins?</a></li><li class="lvl3"><a href="#i-just-want-to-use-skins">I just want to use skins</a></li><li class="lvl3"><a href="#i-want-to-make-skins-i-am-a-creator">I want to make skins (I am a creator)</a></li><li class="lvl2"><a href="#what-stitchwork-is">What Stitchwork is</a></li><li class="lvl2"><a href="#requirements">Requirements</a></li><li class="lvl2"><a href="#installing">Installing</a></li><li class="lvl2"><a href="#already-using-patchwork-or-customizer">Mods to remove first</a></li><li class="lvl2"><a href="#first-launch">First launch</a></li><li class="lvl2"><a href="#choose-your-next-page">Choose your next page</a></li><li class="lvl2"><a href="#opening-the-tools">Opening the tools</a></li><li class="lvl2"><a href="#settings">Settings</a></li></ul></nav>
+</div>
+
+<script src="../assets/demos.js"></script>
+
+<script src="../assets/app.js"></script></body></html>
