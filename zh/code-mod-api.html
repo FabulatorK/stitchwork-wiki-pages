@@ -198,7 +198,7 @@
 <p>子集目前还是预览功能（见<a href="AEx1-conditional-activation.html#rule-sets-conditions-a-pack-carries-preview">条件激活</a>）。API 的其他部分还没有做出来，见<a href="#not-built-yet">尚未实现</a>。</p>
 <h2 id="the-contract">约定</h2>
 <p>API 的每个版本都遵守下面这些规则：</p>
-<ul><li>类是 <code>Stitchwork.StitchworkApi</code>，位于 <code>Stitchwork.dll</code> 中。它的完整名称永远不会改变。</li><li><code>StitchworkApi.ApiVersion</code> 为 <code>1</code>。新版本只会添加成员。已有成员的签名和含义永远不会改变。破坏性的改动会使用新的成员名和新的版本号。</li><li>参数只有字符串、布尔值和 <code>Func&lt;bool&gt;</code>。所以你的模组可以通过反射调用 API，不需要引用 Stitchwork 的类型。</li></ul>
+<ul><li>类是 <code>Stitchwork.StitchworkApi</code>，位于 <code>Stitchwork.dll</code> 中。它的完整名称永远不会改变。</li><li><code>StitchworkApi.ApiVersion</code> 为 <code>1</code>。新的发布版本只会添加成员。已有成员的签名和含义永远不会改变。破坏性的改动会使用新的成员名和更高的 <code>ApiVersion</code>。</li><li>签名只使用基本类型、字符串、委托和 Unity 自带的类型。所以你的模组可以通过反射调用 API，不需要引用 Stitchwork 的类型。</li></ul>
 <p><code>ApiVersion</code> 是常量，所以对硬引用了 Stitchwork 的模组来说，这个数字固定为编译时的值。要读取当前安装的版本，请通过反射读取这个字段：</p>
 <pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>typeof(StitchworkApi).GetField("ApiVersion").GetValue(null)</code></pre>
 <h2 id="the-members">成员</h2>
@@ -238,7 +238,7 @@ public sealed class BindMod : BaseUnityPlugin
 }</code></pre>
 <p><code>[BepInDependency("Stitchwork")]</code> 让 BepInEx 先启动 Stitchwork，再启动你的模组。所以在你的模组的 <code>Awake</code> 里，<wbr><code>Ready</code> 已经是 true。（<code>Stitchwork</code> 是 Stitchwork 的 BepInEx GUID。）</p>
 <h2 id="example-reflection">示例：反射</h2>
-<p>如果你的模组在没有 Stitchwork 时也必须能运行，就用这种写法。你的模组不需要引用 <code>Stitchwork.dll</code>。这种写法我们已经在游戏里运行过。上面那个硬引用的示例我们编译过，但没有在游戏里运行过。</p>
+<p>如果你的模组在没有 Stitchwork 时也必须能运行，就用这种写法。你的模组不需要引用 <code>Stitchwork.dll</code>。这种写法我们已经在游戏里运行过。上面那个硬引用的示例我们编译过，但没有在游戏里运行过。这个示例没有写 <code>RemoveAll</code>：像硬引用示例那样，在 <code>OnDestroy</code> 里通过反射调用它。</p>
 <pre class="code"><button class="copy" aria-label="Copy">Copy</button><code>using System;
 using System.Reflection;
 using BepInEx;
@@ -291,7 +291,7 @@ public sealed class SoftBindMod : BaseUnityPlugin
 <h2 id="the-log">日志</h2>
 <p>Stitchwork 会把下面这些行写进 <code>BepInEx/LogOutput.log</code>。同一种情况的警告，在一次游戏运行中只出现一次。</p>
 <div class="table-wrap"><table><thead><tr><th>时机</th><th>日志行</th></tr></thead><tbody><tr><td>调用成功</td><td><code>[StitchworkApi] &lt;owner&gt; registered the condition &lt;owner&gt;:&lt;name&gt;</code></td></tr><tr><td>owner 不合法</td><td><code>[StitchworkApi] Register: the owner must be the caller's plugin GUID (got '&lt;owner&gt;').</code></td></tr><tr><td>name 不合法</td><td><code>[StitchworkApi] Register: &lt;owner&gt; passed '&lt;name&gt;'; a condition name holds letters, digits and _ only.</code></td></tr><tr><td>判定函数为 null</td><td><code>[StitchworkApi] Register: &lt;owner&gt; passed a null predicate for &lt;name&gt;.</code></td></tr><tr><td>不在主线程上</td><td><code>[StitchworkApi] Register was called by &lt;owner&gt; off the main thread; it did nothing. Call it from Unity's main thread.</code></td></tr><tr><td>判定函数抛出异常（错误，每次注册只写一次）</td><td><code>[RuleSets] the predicate '&lt;owner&gt;:&lt;name&gt;' of &lt;owner&gt; threw and is now off: &lt;ExceptionType&gt;: &lt;message&gt;</code></td></tr><tr><td>资源包引用了没有任何已安装模组发布的条件（警告，每个键只写一次）</td><td><code>[RuleSets] no mod provides '&lt;owner&gt;:&lt;name&gt;'; it reads as false</code></td></tr></tbody></table></div>
-<p><code>Unregister</code> 和 <code>Notify</code> 也会写出同样的警告，只是把 <code>Register</code> 换成它们自己的名字。</p>
+<p><code>Unregister</code> 和 <code>Notify</code> 会写出所有者、名称和线程这几条警告，只是把 <code>Register</code> 换成它们自己的名字。<code>RemoveAll</code> 只会写出线程警告。</p>
 <h2 id="not-built-yet">尚未实现</h2>
 <p>API 的下面这些部分已在计划中，还没有时间表。</p>
 <ul><li><strong>资源包与事件。</strong>模组将可以列出资源包，在本次游戏运行期间开启或关闭某个资源包或子集，并把这些改动一次性应用。事件会在重新加载完成时、以及子集变化时通知模组。这些部分还没有实现，形式也可能改变。</li><li><strong>实例皮肤。</strong>让单个对象拥有自己的皮肤，适用于 Architect 这样的模组。相关成员已经存在，但目前还不起作用：<code>StitchworkApi.InstanceSkinsReady</code> 为 false，<wbr><code>ApplyInstanceSkin</code> 返回 0，并在日志里写一条警告。你的模组可以在启动时检查 <code>InstanceSkinsReady</code>。</li></ul>

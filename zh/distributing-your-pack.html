@@ -41,7 +41,7 @@
     ...</code></pre>
 <p>模组扫描资源时，看的是里面那层 <code>Stitchwork/</code> 文件夹（它也认 <code>Patchwork/</code> 文件夹，照顾那些原本为上游 Patchwork 制作的资源包）。其余的都是 Thunderstore 打包用的元数据。</p>
 <blockquote class="note"><p><strong>这三个元数据文件要放在 zip 的<em>根目录</em>，不能放进子文件夹。</strong>这是上传时最常见的错误，没有之一。压缩时，请选中 <code>my-pack/</code> <em>里面的内容</em>（<code>manifest.json</code>、<wbr><code>icon.png</code>、<wbr><code>README.md</code> 和 <code>Stitchwork/</code> 文件夹），而不是选中 <code>my-pack/</code> 文件夹本身。</p></blockquote>
-<blockquote class="note"><p><strong>zip 的层级要尽量浅——每多一层文件夹，都会吃掉所有人的路径长度余量。</strong>模组管理器本来就会把你的资源包装进它自己创建的 <code>plugins/TeamName-PackName/</code> 文件夹，而这个文件夹又位于管理器档案那层很深的目录里。Windows 的文件路径上限是 260 个字符，而游戏里最长的资源名称（光是 <code>Hornet CrestWeapon Scythe/<wbr>Dash Upper Recovery_WIP/<wbr>000_…0008.png</code> 就有大约 100 个字符）在安装位置嵌套太深时，就可能超出这个上限。这时文件会出错，报出让人摸不着头脑的“could not find a part of the path”错误，而且只有名字最长的那几张精灵图出错，排查起来能把人逼疯。zip 里多余的一层外壳文件夹，就是白白浪费掉 10–20 个字符的余量。2026 年 7 月的实际反馈证实了这一点：收割者纹章的动画能不能解压成功，差别就在多出来的这一层。</p></blockquote>
+<blockquote class="note"><p><strong>zip 的层级要尽量浅——每多一层文件夹，都会吃掉所有人的路径长度余量。</strong>模组管理器本来就会把你的资源包装进它自己创建的 <code>plugins/TeamName-PackName/</code> 文件夹，而这个文件夹又位于管理器档案那层很深的目录里。Windows 的文件路径上限是 260 个字符，而游戏里最长的资源路径（光是 <code>Sprites/<wbr>Hornet CrestWeapon Scythe/<wbr>Clips/<wbr>Dash Upper Effect/<wbr>attack_dash_slash_scythe_effect_new0005.png</code> 就有 101 个字符）在安装位置嵌套太深时，就可能超出这个上限。这时文件会出错，报出让人摸不着头脑的“could not find a part of the path”错误，而且只有名字最长的那几张精灵图出错，排查起来能把人逼疯。zip 里多余的一层外壳文件夹，就是白白浪费掉 10–20 个字符的余量。2026 年 7 月的实际反馈证实了这一点：收割者纹章的动画能不能解压成功，差别就在多出来的这一层。</p></blockquote>
 <blockquote class="note"><p><strong><code>pack.json</code> 和 <code>manifest.json</code>：两个不同的文件，给不同的程序读。</strong>根目录下的 <code>manifest.json</code> 是<strong>给 Thunderstore 用的</strong>（商店页面、版本号、依赖项）。<strong><code>Stitchwork/</code> 里面</strong>那个可选的 <code>pack.json</code> 是<strong>给 Stitchwork 用的</strong>——它决定游戏内资源包管理器里，你的资源包卡片上显示的名称、作者、版本和简介，还可以指定一张封面图（见<a href="pack-folder-structure.html#naming-your-pack-pack-json">给资源包命名</a>）。两个文件都要放进包里：Stitchwork 从来不读 <code>manifest.json</code>，Thunderstore 也从来不读 <code>pack.json</code>。</p>
 <p>就算文件夹名看起来没问题，也要附上 <code>pack.json</code>。Stitchwork 靠它里面的名称和作者，记住每位玩家给你的资源包设置的开关状态、排列顺序和启用条件。没有它的话，一旦新版本换了文件夹名发布，玩家的这些设置就会丢失。</p></blockquote>
 <h2 id="manifest-json">manifest.json</h2>
@@ -57,7 +57,7 @@
 }</code></pre>
 <p>逐项说明：</p>
 <ul><li><strong><code>name</code></strong>——资源包的名称。只能用字母、数字和下划线（不能有空格）；它会成为 Thunderstore 网址的一部分。</li><li><strong><code>version_number</code></strong>——语义化版本号 <code>MAJOR.MINOR.PATCH</code>，例如 <code>1.0.0</code>。Thunderstore <em>要求</em>三个数字都写全，而且每次更新都必须调高版本号（同一个版本不能重复上传）。</li><li><strong><code>website_url</code></strong>——仓库或社交媒体链接。可以不填，但这个键必须存在——没有链接就填空字符串 <code>""</code>。</li><li><strong><code>description</code></strong>——一句话介绍，最多 250 个字符。会显示在模组列表里。</li><li><strong><code>dependencies</code></strong>——你的资源包依赖的包，每一项都必须是<strong>准确无误的</strong> Thunderstore 标识符，格式为 <code>Namespace-Name-Version</code>，其中的命名空间就是团队名（比如 <code>TeamName-PackName-1.2.3</code>）。一定要包含 BepInEx 包和 Stitchwork。</li></ul>
-<blockquote class="note"><p><strong>依赖字符串要复制，别手打。</strong>打开每个依赖项的 Thunderstore 页面，原样复制它的标识符——命名空间、准确的名称，以及一个确实存在的版本号。版本字符串写错或者版本不存在，你的资源包就会安装失败。版本号会不断更新，所以从页面复制才是长久之计：每次更新时都重新复制一遍。（如果你的资源包需要的 Stitchwork 版本还没上架 Thunderstore，玩家该怎么获取它，请按照那个版本自己的安装说明来。）</p></blockquote>
+<blockquote class="note"><p><strong>依赖字符串要复制，别手打。</strong>打开每个依赖项的 Thunderstore 页面，原样复制它的标识符——命名空间、准确的名称，以及一个确实存在的版本号。如果依赖项写的版本不存在，Thunderstore 会拒绝这次上传。版本号会不断更新，所以从页面复制才是长久之计：每次更新时都重新复制一遍。（如果你的资源包需要的 Stitchwork 版本还没上架 Thunderstore，玩家该怎么获取它，请按照那个版本自己的安装说明来。）</p></blockquote>
 <h2 id="icon-png">icon.png</h2>
 <ul><li><strong>必须正好是 256×256 像素。</strong>其他尺寸 Thunderstore 一律拒收。</li><li>PNG 格式，带不带透明通道都可以。</li><li>要让人一眼就能看懂——比如标志性的角色、前后对比，或者辨识度高的剪影。在长长的列表里，别人就是靠它发现你的资源包的。</li></ul>
 <figure class="img"><img src="images/dist-icon-compare.png" alt="一个清楚的图标和一个杂乱的图标，分别以原尺寸和列表尺寸显示。" loading="lazy"><figcaption>一个清楚的图标和一个杂乱的图标，分别以原尺寸和列表尺寸显示。</figcaption></figure>
@@ -74,7 +74,7 @@
 </div>
 <h2 id="check-before-you-publish">发布前先检查</h2>
 <p>点击资源包卡片底栏上的体检按钮（听诊器图标，<strong>对此资源包进行体检</strong>）。体检会读取资源包的文件，写出一份报告并打开它。它能找出那些不报错、悄悄失效的问题，例如：</p>
-<ul><li>内容多套了一层文件夹（压缩包里又套了一个压缩包）；</li><li>顶层文件夹的大小写不对，比如把 <code>Sprites/</code> 写成了 <code>sprites/</code>（在 Windows 上能用，到 Linux 和 Steam Deck 上就会失效）；</li><li>缺少 <code>pack.json</code>；</li><li>字体文件直接放在 <code>Fonts/</code> 下面；</li><li>旧的 <code>Recolour/</code> 文件夹（请改名为 <code>Recolor/</code>）；</li><li>残留的 <code>_WIP</code> 文件夹、旧的 <code>anchors.txt</code>，或者资源导出文件夹。</li></ul>
+<ul><li>内容多套了一层文件夹（比如 zip 解压到了一个多余的文件夹里）；</li><li>顶层文件夹的大小写不对，比如把 <code>Sprites/</code> 写成了 <code>sprites/</code>（在 Windows 上能用，到 Linux 和 Steam Deck 上就会失效）；</li><li>缺少 <code>pack.json</code>；</li><li>字体文件直接放在 <code>Fonts/</code> 下面；</li><li>旧的 <code>Recolour/</code> 文件夹（请改名为 <code>Recolor/</code>）；</li><li>残留的 <code>_WIP</code> 文件夹、旧的 <code>anchors.txt</code>，或者资源导出文件夹。</li></ul>
 <p>把查出的问题改好，然后再体检一次。</p>
 <h3 id="clean-the-sprite-edges">清理精灵图边缘</h3>
 <p>Clip Studio Paint 保存 PNG 时，会把透明像素的底色存成白色，游戏里美术的边缘就会出现白色斑点。体检会找出有这个问题的 PNG。体检完成后，资源包管理器会询问是否帮你清理这些文件，清理前会先备份每一个文件（见<a href="A3-pack-manager.html">资源包管理器</a>中的“精灵图边缘偏浅”）。发布之前，请先清理这些文件。<strong>清理精灵图边缘（CSP 修复）</strong>这个设置，只会在开着它的玩家自己的游戏里隐藏这些斑点；清理过的文件，则能为所有玩家修好这些斑点。<a href="troubleshooting.html#white-specks-around-the-edges-of-my-art">问题自查</a>会一步步讲清楚其中的原因。</p>

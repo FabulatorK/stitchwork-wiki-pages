@@ -26,7 +26,7 @@
 <figure class="img"><img src="../en/images/ts-inactive-toast.png" alt="Patchwork 也装着时，这条提示会一直停在主菜单右下角。点击 Got it 会关闭提示，直到这次游戏结束，Stitchwork 都保持关闭" loading="lazy"><figcaption>Patchwork 也装着时，这条提示会一直停在主菜单右下角。点击 Got it 会关闭提示，直到这次游戏结束，Stitchwork 都保持关闭</figcaption></figure>
 <p>解决办法：从 <code>BepInEx/plugins/</code> 中删除 <code>Patchwork.dll</code>。注意，<strong>Architect-Silksong 并不依赖 Patchwork</strong>，可以和 Stitchwork 正常共存——只有单独安装的 Patchwork 才会让 Stitchwork 进入停用模式。</p>
 <p>其他原因：</p>
-<ul><li><strong>根本没装 BepInEx。</strong>Stitchwork 是 BepInEx 插件——没有 BepInEx 5，它就无法加载。检查游戏文件夹里有没有 <code>BepInEx/core/BepInEx.dll</code>。</li><li><strong>Stitchwork 放错了位置。</strong>它的 DLL 必须放在 <code>BepInEx/plugins/</code> 下一级的某个文件夹里（推荐命名为 <code>StitchworkRoot/</code>）。文件夹叫什么本身无所谓——Stitchwork 会根据 DLL 加载的位置找到自己——但 DLL 不能直接散放在 <code>plugins/</code> 里，也不能藏在更深的子目录中。</li><li><strong>启动时出现了异常。</strong>打开 <code>BepInEx/LogOutput.log</code>，搜索 <code>Stitchwork</code>。插件 <code>Awake</code> 期间出现的错误会记在那里。</li></ul>
+<ul><li><strong>根本没装 BepInEx。</strong>Stitchwork 是 BepInEx 插件——没有 BepInEx 5，它就无法加载。检查游戏文件夹里有没有 <code>BepInEx/core/BepInEx.dll</code>；用模组管理器的话，就检查管理器档案的文件夹。</li><li><strong>Stitchwork 放错了位置。</strong>它的 DLL 必须放在 <code>BepInEx/plugins/</code> 下一级的某个文件夹里（推荐命名为 <code>StitchworkRoot/</code>）。文件夹叫什么本身无所谓——Stitchwork 会根据 DLL 加载的位置找到自己——但 DLL 不能直接散放在 <code>plugins/</code> 里，也不能藏在更深的子目录中。</li><li><strong>启动时出现了异常。</strong>打开 <code>BepInEx/LogOutput.log</code>，搜索 <code>Stitchwork</code>。插件 <code>Awake</code> 期间出现的错误会记在那里。</li></ul>
 <hr>
 <h2 id="black-screen-at-launch-the-game-never-reaches-the-menu">“启动后黑屏 —— 游戏一直进不了菜单”</h2>
 <p>如果日志开头附近有这些内容：</p>
@@ -69,10 +69,10 @@ InvalidKeyException: … No Location found for Key=Scenes/Pre_Menu_Intro</code><
 <p>也就是常说的“精灵图替换没显示”——新手创作者问得最多的问题。</p>
 <h3 id="check-the-file-path">检查文件路径</h3>
 <p>路径很关键。常见的错误有：</p>
-<ul><li><strong>写成了 <code>Sprite/</code>，而不是 <code>Sprites/</code></strong>——注意结尾的 <code>s</code>。可以相信Stitchwork自己生成的文件夹名。</li><li><strong>集合名称不对</strong>——不区分大小写，但必须和游戏里的集合一致。可以在<strong>图形</strong> › <strong>动画</strong>里核对准确的名称。</li><li><strong>材质名称不对</strong>——同上。</li><li><strong>精灵图名称不对</strong>——文件名（不含 <code>.png</code>）必须和精灵图名称一致。<code>Idle_0.png</code> 和 <code>idle_0.png</code> 都可以；<wbr><code>idle 0.png</code>（带空格）和 <code>idle-0.png</code>（带短横线）就不行。</li><li><strong>扩展名是大写的 <code>.PNG</code></strong>——通常没问题，但在区分大小写的文件系统上会失效。保险起见，用小写的 <code>.png</code>。</li></ul>
+<ul><li><strong>写成了 <code>Sprite/</code>，而不是 <code>Sprites/</code></strong>——注意结尾的 <code>s</code>。可以相信Stitchwork自己生成的文件夹名。</li><li><strong>集合名称不对</strong>——不区分大小写，但必须和游戏里的集合一致。可以在<strong>图形</strong> › <strong>动画</strong>里核对准确的名称。</li><li><strong>材质名称不对</strong>——同上。</li><li><strong>精灵图名称不对</strong>——文件名（不含 <code>.png</code>）必须和精灵图名称一致。<code>Idle_0.png</code> 和 <code>idle_0.png</code> 都可以；<wbr><code>idle 0.png</code>（带空格）和 <code>idle-0.png</code>（带短横线）就不行。</li><li><strong>扩展名是大写的 <code>.PNG</code></strong>——请用小写的 <code>.png</code>。在 Windows 上大小写没有影响；在 Linux 和 macOS 上，扩展名为 <code>.PNG</code> 的 T2D 文件可能会被跳过。</li></ul>
 <h3 id="did-the-file-watcher-pick-it-up">文件监视器发现它了吗？</h3>
 <p>Stitchwork 支持热重载——文件改动会被检测到，片刻后就会生效。如果文件路径没错，游戏却没有读取它：</p>
-<ul><li>试着切换一次场景（穿过一扇门）。载入场景时，所有替换都会无条件地重新应用一遍。</li><li>在资源包管理器（<strong>资源包</strong>）里关掉这个资源包，点击<strong>应用</strong>。再打开这个资源包，然后再点一次<strong>应用</strong>。</li><li>查看 <code>BepInEx/LogOutput.log</code>——在你保存文件的那个时间点附近，找 <code>[Stitchwork]</code> 开头的条目。你应该能看到一行和“reload”有关的日志。</li></ul>
+<ul><li>试着切换一次场景（穿过一扇门）。载入场景时，所有替换都会无条件地重新应用一遍。</li><li>在资源包管理器（<strong>资源包</strong>）里关掉这个资源包，点击<strong>应用</strong>。再打开这个资源包，然后再点一次<strong>应用</strong>。</li><li>查看 <code>BepInEx/LogOutput.log</code>——在你保存文件的那个时间点附近，找一行 <code>[SpriteLoader] Reload complete</code>（声音则找 <code>[Audio] Reload</code>）。</li></ul>
 <h3 id="is-the-sprite-actually-visible-right-now">那一帧现在在屏幕上吗？</h3>
 <p>如果角色正在播放动画，显示的是另一帧，你替换的图要等那一帧播放时才会出现。等对应的帧出现在屏幕上（待机、攻击到一半、某个特定表情）再看。</p>
 <p>对于由 Animator 驱动、每帧都在变化的精灵图，每次显示那一帧时，都会应用一次替换。</p>

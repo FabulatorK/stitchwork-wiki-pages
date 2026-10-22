@@ -81,7 +81,9 @@ Packs/my-hornet-skin/Stitchwork/Sprites/Knight/atlas2/idle0000.png</code></pre> 
 <p>把一张 1280 × 400 像素的 <code>cover.png</code> 放进资源包的 <code>Stitchwork/</code> 文件夹，资源包管理器就会把它显示在资源包的卡片上（<a href="distributing-your-pack.html#pack-cover">资源包封面</a>）。</p>
 <details>
 <summary>手上有 Customizer 皮肤？</summary>
-<p>装在游戏 <code>…_Data/Mods/Customizer/</code> 文件夹下的皮肤，会出现在资源包面板里，卡片上带有一个衣服图标（鼠标指向时提示“Customizer 皮肤”）。不用挪动，不用改名，Stitchwork 也不会改动它们的文件。请先卸载 Customizer <em>插件</em>：只要它还装着，Stitchwork 就不会动这个文件夹里的皮肤，因为两个模组会修改同样的贴图，互相冲突。</p>
+<p>装在 Customizer 自己文件夹里的皮肤，会出现在资源包面板里，卡片上带有一个衣服图标（鼠标指向时提示“Customizer 皮肤”）。每个皮肤各占一个文件夹，直接放在这个文件夹里：</p>
+<ul><li><strong>Windows 和 Linux：</strong><code>&lt;Game folder&gt;/<wbr>Hollow Knight Silksong_Data/<wbr>Mods/<wbr>Customizer/<wbr></code></li><li><strong>macOS：</strong><code>&lt;Game folder&gt;/<wbr>Hollow Knight Silksong.app/<wbr>Contents/<wbr>Mods/<wbr>Customizer/<wbr></code>。macOS 上没有 <code>Hollow Knight Silksong_Data</code> 文件夹，Stitchwork 也不会在那里读取这样的文件夹。找这个文件夹的方法：在 Steam 里右键点击游戏，选择<strong>管理 → 浏览本地文件</strong>。在访达（Finder）里右键点击 <strong>Hollow Knight Silksong</strong>，选择<strong>显示包内容</strong>。打开 <code>Contents</code>。如果里面没有 <code>Mods/Customizer/</code>，就自己新建。</li></ul>
+<p>皮肤不用挪动，不用改名，Stitchwork 也不会改动它们的文件。请先卸载 Customizer <em>插件</em>：只要它还装着，Stitchwork 就不会动这个文件夹里的皮肤，因为两个模组会修改同样的贴图，互相冲突。</p>
 <p><strong>通过模组管理器</strong>安装的 Customizer 皮肤也一样能用——它们会被装到 <code>BepInEx/plugins/</code> 下，Customizer 从来不会去那里找，但 Stitchwork 能通过创作者打包在 zip 里的 <code>active.txt</code> 文件认出它们。它们的衣服图标提示是“plugins/ 下的 Customizer 皮肤，不在 Customizer 自己的文件夹中”。如果某个通过模组管理器安装的皮肤没有出现，请检查它的文件夹根目录下有没有 <code>active.txt</code>——没有的话就新建一个空文件，然后点击<strong>重新扫描</strong>。</p>
 <p>Stitchwork 也能读取<strong>扁平</strong>结构的皮肤。有些 Thunderstore 皮肤把所有文件都放在同一个文件夹里，没有任何子文件夹。Stitchwork 会从这个文件夹中载入 <code>sactx-*.png</code> 整图、以贴图名称命名的贴图文件，以及视频文件。有一个限制：扁平结构里的 <code>atlas0.png</code> 只说明了是哪张 tk2d 图集，却没有说明它属于哪个集合，所以 Stitchwork 不会应用它——日志会记下每个被跳过的文件。想用这部分美术，请把它移到 <code>Spritesheets/<wbr>[Collection]/<wbr>[TextureName].png</code>。</p>
 </details>
